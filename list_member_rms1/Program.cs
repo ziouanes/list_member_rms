@@ -40,7 +40,7 @@ namespace list_member_rms1
             Application.Run(new Membres());
 
     }
-        public static SqlConnection sql_con = new SqlConnection(@"server =192.168.100.92;database = simpleDatabase ; user id = log1; password=P@ssword1965** ;MultipleActiveResultSets =True;");
+        public static SqlConnection sql_con = new SqlConnection(@"server =192.168.100.92;database = list_member_rms ; user id = log1; password=P@ssword1965** ;MultipleActiveResultSets =True;");
 
 
         public static SqlCommand sql_cmd;

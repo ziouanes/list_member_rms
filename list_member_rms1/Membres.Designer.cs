@@ -30,11 +30,12 @@ namespace list_member_rms1
         ///
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Membres));
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions5 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions6 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions7 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions8 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions3 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions4 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
@@ -43,8 +44,6 @@ namespace list_member_rms1
             this.textEditprenom = new DevExpress.XtraEditors.TextEdit();
             this.textEditprenomar = new DevExpress.XtraEditors.TextEdit();
             this.textEditcin = new DevExpress.XtraEditors.TextEdit();
-            this.textEditprovince = new DevExpress.XtraEditors.TextEdit();
-            this.textEditsigle = new DevExpress.XtraEditors.LookUpEdit();
             this.textEditemail = new DevExpress.XtraEditors.TextEdit();
             this.textEditcontact = new DevExpress.XtraEditors.TextEdit();
             this.textEditfunction = new DevExpress.XtraEditors.LookUpEdit();
@@ -52,6 +51,12 @@ namespace list_member_rms1
             this.textEditdate = new DevExpress.XtraEditors.DateEdit();
             this.textEditrib = new DevExpress.XtraEditors.TextEdit();
             this.textEditagence = new DevExpress.XtraEditors.TextEdit();
+            this.textEditsigle = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSigle = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDénomination = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colParti = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -90,6 +95,10 @@ namespace list_member_rms1
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
+            this.textEditprovince = new DevExpress.XtraEditors.LookUpEdit();
+            this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.sigleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.previnceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -100,8 +109,6 @@ namespace list_member_rms1
             ((System.ComponentModel.ISupportInitialize)(this.textEditprenom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditprenomar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditcin.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditprovince.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditsigle.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditemail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditcontact.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditfunction.Properties)).BeginInit();
@@ -110,6 +117,8 @@ namespace list_member_rms1
             ((System.ComponentModel.ISupportInitialize)(this.textEditdate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditrib.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditagence.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditsigle.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -146,6 +155,10 @@ namespace list_member_rms1
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditprovince.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sigleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.previnceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -168,8 +181,6 @@ namespace list_member_rms1
             this.layoutControl1.Controls.Add(this.textEditprenom);
             this.layoutControl1.Controls.Add(this.textEditprenomar);
             this.layoutControl1.Controls.Add(this.textEditcin);
-            this.layoutControl1.Controls.Add(this.textEditprovince);
-            this.layoutControl1.Controls.Add(this.textEditsigle);
             this.layoutControl1.Controls.Add(this.textEditemail);
             this.layoutControl1.Controls.Add(this.textEditcontact);
             this.layoutControl1.Controls.Add(this.textEditfunction);
@@ -177,6 +188,8 @@ namespace list_member_rms1
             this.layoutControl1.Controls.Add(this.textEditdate);
             this.layoutControl1.Controls.Add(this.textEditrib);
             this.layoutControl1.Controls.Add(this.textEditagence);
+            this.layoutControl1.Controls.Add(this.textEditsigle);
+            this.layoutControl1.Controls.Add(this.textEditprovince);
             this.layoutControl1.Location = new System.Drawing.Point(12, 12);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(820, 228, 650, 400);
@@ -236,25 +249,6 @@ namespace list_member_rms1
             this.textEditcin.Size = new System.Drawing.Size(222, 20);
             this.textEditcin.StyleController = this.layoutControl1;
             this.textEditcin.TabIndex = 4;
-            // 
-            // textEditprovince
-            // 
-            this.textEditprovince.Location = new System.Drawing.Point(564, 81);
-            this.textEditprovince.Name = "textEditprovince";
-            this.textEditprovince.Size = new System.Drawing.Size(184, 20);
-            this.textEditprovince.StyleController = this.layoutControl1;
-            this.textEditprovince.TabIndex = 5;
-            // 
-            // textEditsigle
-            // 
-            this.textEditsigle.Location = new System.Drawing.Point(254, 115);
-            this.textEditsigle.Name = "textEditsigle";
-            this.textEditsigle.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEditsigle.Properties.NullText = "";
-            this.textEditsigle.Size = new System.Drawing.Size(222, 20);
-            this.textEditsigle.StyleController = this.layoutControl1;
-            this.textEditsigle.TabIndex = 6;
             // 
             // textEditemail
             // 
@@ -327,6 +321,60 @@ namespace list_member_rms1
             this.textEditagence.Size = new System.Drawing.Size(308, 20);
             this.textEditagence.StyleController = this.layoutControl1;
             this.textEditagence.TabIndex = 5;
+            // 
+            // textEditsigle
+            // 
+            this.textEditsigle.Location = new System.Drawing.Point(254, 115);
+            this.textEditsigle.Name = "textEditsigle";
+            this.textEditsigle.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEditsigle.Properties.DataSource = this.sigleBindingSource;
+            this.textEditsigle.Properties.DisplayMember = "Parti";
+            this.textEditsigle.Properties.NullText = "";
+            this.textEditsigle.Properties.PopupView = this.gridLookUpEdit1View;
+            this.textEditsigle.Properties.ValueMember = "id";
+            this.textEditsigle.Size = new System.Drawing.Size(222, 20);
+            this.textEditsigle.StyleController = this.layoutControl1;
+            this.textEditsigle.TabIndex = 6;
+            // 
+            // gridLookUpEdit1View
+            // 
+            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colid,
+            this.colSigle,
+            this.colDénomination,
+            this.colParti});
+            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colid
+            // 
+            this.colid.FieldName = "id";
+            this.colid.Name = "colid";
+            // 
+            // colSigle
+            // 
+            this.colSigle.FieldName = "Sigle";
+            this.colSigle.Name = "colSigle";
+            this.colSigle.Visible = true;
+            this.colSigle.VisibleIndex = 0;
+            // 
+            // colDénomination
+            // 
+            this.colDénomination.ColumnEdit = this.repositoryItemPictureEdit1;
+            this.colDénomination.FieldName = "Dénomination";
+            this.colDénomination.Name = "colDénomination";
+            this.colDénomination.Visible = true;
+            this.colDénomination.VisibleIndex = 1;
+            // 
+            // colParti
+            // 
+            this.colParti.FieldName = "Parti";
+            this.colParti.Name = "colParti";
+            this.colParti.Visible = true;
+            this.colParti.VisibleIndex = 2;
             // 
             // Root
             // 
@@ -765,15 +813,15 @@ namespace list_member_rms1
             this.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = true;
             this.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = true;
             this.windowsUIButtonPanelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
-            windowsUIButtonImageOptions5.ImageUri.Uri = "Save;Size32x32;GrayScaled";
-            windowsUIButtonImageOptions6.ImageUri.Uri = "SaveAndNew;Size32x32;GrayScaled";
-            windowsUIButtonImageOptions7.ImageUri.Uri = "Reset;Size32x32;GrayScaled";
-            windowsUIButtonImageOptions8.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled";
+            windowsUIButtonImageOptions1.ImageUri.Uri = "Save;Size32x32;GrayScaled";
+            windowsUIButtonImageOptions2.ImageUri.Uri = "SaveAndNew;Size32x32;GrayScaled";
+            windowsUIButtonImageOptions3.ImageUri.Uri = "Reset;Size32x32;GrayScaled";
+            windowsUIButtonImageOptions4.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled";
             this.windowsUIButtonPanelMain.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Enregistrer", true, windowsUIButtonImageOptions5, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Enregistrer et nouveau", true, windowsUIButtonImageOptions6, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Réinitialiser", true, windowsUIButtonImageOptions7, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Supprimer", true, windowsUIButtonImageOptions8, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Enregistrer", true, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Enregistrer et nouveau", true, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Réinitialiser", true, windowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Supprimer", true, windowsUIButtonImageOptions4, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
             this.windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.windowsUIButtonPanelMain.EnableImageTransparency = true;
             this.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White;
@@ -809,6 +857,38 @@ namespace list_member_rms1
             this.labelControl.TabIndex = 1;
             this.labelControl.Text = "nouveau élu ";
             // 
+            // textEditprovince
+            // 
+            this.textEditprovince.Location = new System.Drawing.Point(564, 81);
+            this.textEditprovince.Name = "textEditprovince";
+            this.textEditprovince.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEditprovince.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("id", "id", 31, DevExpress.Utils.FormatType.Numeric, "", false, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ProvinceAr", "Province Ar", 65, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ProvinceFr", "Province Fr", 64, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.textEditprovince.Properties.DataSource = this.previnceBindingSource;
+            this.textEditprovince.Properties.DisplayMember = "ProvinceFr";
+            this.textEditprovince.Properties.NullText = "";
+            this.textEditprovince.Properties.ValueMember = "id";
+            this.textEditprovince.Size = new System.Drawing.Size(184, 20);
+            this.textEditprovince.StyleController = this.layoutControl1;
+            this.textEditprovince.TabIndex = 5;
+            // 
+            // repositoryItemPictureEdit1
+            // 
+            this.repositoryItemPictureEdit1.Name = "repositoryItemPictureEdit1";
+            this.repositoryItemPictureEdit1.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.repositoryItemPictureEdit1.ZoomingOperationMode = DevExpress.XtraEditors.Repository.ZoomingOperationMode.MouseWheel;
+            // 
+            // sigleBindingSource
+            // 
+            this.sigleBindingSource.DataSource = typeof(list_member_rms1._Sigle);
+            // 
+            // previnceBindingSource
+            // 
+            this.previnceBindingSource.DataSource = typeof(list_member_rms1.prevince);
+            // 
             // Membres
             // 
             this.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -832,8 +912,6 @@ namespace list_member_rms1
             ((System.ComponentModel.ISupportInitialize)(this.textEditprenom.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditprenomar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditcin.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditprovince.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEditsigle.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditemail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditcontact.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditfunction.Properties)).EndInit();
@@ -842,6 +920,8 @@ namespace list_member_rms1
             ((System.ComponentModel.ISupportInitialize)(this.textEditdate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditrib.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditagence.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditsigle.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -878,6 +958,10 @@ namespace list_member_rms1
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditprovince.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sigleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.previnceBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -904,10 +988,8 @@ namespace list_member_rms1
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
         private DevExpress.XtraEditors.TextEdit textEditcin;
-        private DevExpress.XtraEditors.TextEdit textEditprovince;
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
-        private DevExpress.XtraEditors.LookUpEdit textEditsigle;
         private DevExpress.XtraEditors.TextEdit textEditemail;
         private DevExpress.XtraEditors.TextEdit textEditcontact;
         private DevExpress.XtraEditors.LookUpEdit textEditfunction;
@@ -939,6 +1021,16 @@ namespace list_member_rms1
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem11;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem12;
+        private System.Windows.Forms.BindingSource sigleBindingSource;
+        private DevExpress.XtraEditors.GridLookUpEdit textEditsigle;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+        private DevExpress.XtraGrid.Columns.GridColumn colid;
+        private DevExpress.XtraGrid.Columns.GridColumn colSigle;
+        private DevExpress.XtraGrid.Columns.GridColumn colDénomination;
+        private DevExpress.XtraGrid.Columns.GridColumn colParti;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit1;
+        private DevExpress.XtraEditors.LookUpEdit textEditprovince;
+        private System.Windows.Forms.BindingSource previnceBindingSource;
     }
 
 }

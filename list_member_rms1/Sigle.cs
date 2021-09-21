@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace list_member_rms1
 {
-   public class prevince
+   public class _Sigle
     {
         public int id { get; set; }
-        public string ProvinceAr { get; set; }
-        public string ProvinceFr { get; set; }
-
-
+        public string Sigle { get; set; }
+        public byte[] Dénomination { get; set; }
+        public string Parti { get; set; }
     }
 }

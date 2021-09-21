@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraBars.Docking2010;
+﻿using Dapper;
+using DevExpress.XtraBars.Docking2010;
 using DevExpress.XtraEditors;
 using DevExpress.XtraLayout;
 using DevExpress.XtraLayout.Helpers;
@@ -24,8 +25,10 @@ namespace list_member_rms1
         {
             InitializeComponent();
 
+            select_sigle();
+            select_Province();
 
-          
+
         }
 
         private void pictureEdit2_EditValueChanged(object sender, EventArgs e)
@@ -82,7 +85,7 @@ namespace list_member_rms1
                             Program.sql_cmd.Parameters.AddWithValue("@AGENCE", textEditagence);
                             Program.sql_cmd.Parameters.AddWithValue("@photos", b);
                             Program.sql_cmd.Parameters.AddWithValue("@Province", textEditprovince);
-                            Program.sql_cmd.Parameters.AddWithValue("@Sigle", textEditsigle);
+                            Program.sql_cmd.Parameters.AddWithValue("@Sigle", textEditsigle.Properties.ValueMember);
 
 
                         if (Program.sql_con.State == ConnectionState.Closed) Program.sql_con.Open();
@@ -100,6 +103,64 @@ namespace list_member_rms1
                 {
                     //this.Dispose();
                 }
+            }
+        }
+
+        private void select_sigle()
+        {
+            try
+            {
+
+
+
+                
+
+                    if (Program.sql_con.State == ConnectionState.Closed)
+                        Program.sql_con.Open();
+
+                    string query = $"select * from Sigle";
+
+                    sigleBindingSource.DataSource = Program.sql_con.Query<_Sigle>(query, commandType: CommandType.Text);
+
+
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                //this.Dispose();
+            }
+        }
+
+        private void select_Province()
+        {
+            try
+            {
+
+
+
+
+
+                if (Program.sql_con.State == ConnectionState.Closed)
+                    Program.sql_con.Open();
+
+                string query = $"select * from Province";
+
+                previnceBindingSource.DataSource = Program.sql_con.Query<prevince>(query, commandType: CommandType.Text);
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                //this.Dispose();
             }
         }
 
