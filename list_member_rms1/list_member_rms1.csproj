@@ -66,6 +66,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fonction.cs" />
+    <Compile Include="Fonctionfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fonctionfrm.Designer.cs">
+      <DependentUpon>Fonctionfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="member_de_Bureau.cs" />
     <Compile Include="membre.cs" />
     <Compile Include="Membres_des_Commissions.cs" />
@@ -91,6 +98,9 @@
     <Compile Include="XtraUserControl1.Designer.cs">
       <DependentUpon>XtraUserControl1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Fonctionfrm.resx">
+      <DependentUpon>Fonctionfrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,6 +121,7 @@
       <DependentUpon>XtraUserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="Properties\DataSources\Fonction.datasource" />
     <None Include="Properties\DataSources\membre.datasource" />
     <None Include="Properties\DataSources\prevince.datasource" />
     <None Include="Properties\DataSources\_Sigle.datasource" />
