@@ -97,11 +97,10 @@ namespace list_member_rms1
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
+            this.toastNotificationsManager1 = new DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager(this.components);
             this.sigleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.previnceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fonctionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -160,23 +159,22 @@ namespace list_member_rms1
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toastNotificationsManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sigleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.previnceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fonctionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
             // 
             this.dataLayoutControl1.AllowCustomization = false;
-            this.dataLayoutControl1.Controls.Add(this.simpleButton1);
             this.dataLayoutControl1.Controls.Add(this.layoutControl1);
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 30);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(832, 120, 650, 400);
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(784, 285);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(835, 305);
             this.dataLayoutControl1.TabIndex = 0;
             // 
             // layoutControl1
@@ -196,11 +194,11 @@ namespace list_member_rms1
             this.layoutControl1.Controls.Add(this.textEditsigle);
             this.layoutControl1.Controls.Add(this.textEditprovince);
             this.layoutControl1.Controls.Add(this.textEditfunction);
-            this.layoutControl1.Location = new System.Drawing.Point(12, -13);
+            this.layoutControl1.Location = new System.Drawing.Point(12, 12);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(820, 228, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(743, 260);
+            this.layoutControl1.Size = new System.Drawing.Size(811, 281);
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -210,82 +208,81 @@ namespace list_member_rms1
             this.pictureEdit2.Location = new System.Drawing.Point(12, 12);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit2.Size = new System.Drawing.Size(170, 134);
+            this.pictureEdit2.Size = new System.Drawing.Size(159, 146);
             this.pictureEdit2.StyleController = this.layoutControl1;
             this.pictureEdit2.TabIndex = 9;
             this.pictureEdit2.EditValueChanged += new System.EventHandler(this.pictureEdit2_EditValueChanged);
             // 
             // textEditnom
             // 
-            this.textEditnom.Location = new System.Drawing.Point(250, 12);
+            this.textEditnom.Location = new System.Drawing.Point(239, 12);
             this.textEditnom.Name = "textEditnom";
-            this.textEditnom.Size = new System.Drawing.Size(215, 20);
+            this.textEditnom.Size = new System.Drawing.Size(242, 20);
             this.textEditnom.StyleController = this.layoutControl1;
             this.textEditnom.TabIndex = 4;
             // 
             // textEditnomar
             // 
-            this.textEditnomar.Location = new System.Drawing.Point(489, 12);
+            this.textEditnomar.Location = new System.Drawing.Point(507, 12);
             this.textEditnomar.Name = "textEditnomar";
-            this.textEditnomar.Size = new System.Drawing.Size(197, 20);
+            this.textEditnomar.Size = new System.Drawing.Size(247, 20);
             this.textEditnomar.StyleController = this.layoutControl1;
             this.textEditnomar.TabIndex = 5;
             // 
             // textEditprenom
             // 
-            this.textEditprenom.Location = new System.Drawing.Point(250, 46);
+            this.textEditprenom.Location = new System.Drawing.Point(239, 51);
             this.textEditprenom.Name = "textEditprenom";
-            this.textEditprenom.Size = new System.Drawing.Size(215, 20);
+            this.textEditprenom.Size = new System.Drawing.Size(242, 20);
             this.textEditprenom.StyleController = this.layoutControl1;
             this.textEditprenom.TabIndex = 6;
             // 
             // textEditprenomar
             // 
-            this.textEditprenomar.Location = new System.Drawing.Point(489, 46);
+            this.textEditprenomar.Location = new System.Drawing.Point(507, 51);
             this.textEditprenomar.Name = "textEditprenomar";
-            this.textEditprenomar.Size = new System.Drawing.Size(200, 20);
+            this.textEditprenomar.Size = new System.Drawing.Size(250, 20);
             this.textEditprenomar.StyleController = this.layoutControl1;
             this.textEditprenomar.TabIndex = 7;
             // 
             // textEditcin
             // 
-            this.textEditcin.Location = new System.Drawing.Point(250, 81);
+            this.textEditcin.Location = new System.Drawing.Point(239, 87);
             this.textEditcin.Name = "textEditcin";
-            this.textEditcin.Size = new System.Drawing.Size(215, 20);
+            this.textEditcin.Size = new System.Drawing.Size(242, 20);
             this.textEditcin.StyleController = this.layoutControl1;
             this.textEditcin.TabIndex = 4;
             // 
             // textEditemail
             // 
-            this.textEditemail.Location = new System.Drawing.Point(76, 150);
+            this.textEditemail.Location = new System.Drawing.Point(76, 162);
             this.textEditemail.Name = "textEditemail";
-            this.textEditemail.Size = new System.Drawing.Size(270, 20);
+            this.textEditemail.Size = new System.Drawing.Size(302, 20);
             this.textEditemail.StyleController = this.layoutControl1;
             this.textEditemail.TabIndex = 4;
             // 
             // textEditcontact
             // 
-            this.textEditcontact.Location = new System.Drawing.Point(433, 150);
+            this.textEditcontact.Location = new System.Drawing.Point(467, 162);
             this.textEditcontact.Name = "textEditcontact";
-            this.textEditcontact.Size = new System.Drawing.Size(298, 20);
+            this.textEditcontact.Size = new System.Drawing.Size(332, 20);
             this.textEditcontact.StyleController = this.layoutControl1;
             this.textEditcontact.TabIndex = 5;
             // 
             // textEditadress
             // 
-            this.textEditadress.Location = new System.Drawing.Point(433, 184);
+            this.textEditadress.Location = new System.Drawing.Point(467, 201);
             this.textEditadress.Name = "textEditadress";
             this.textEditadress.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEditadress.Size = new System.Drawing.Size(298, 20);
+            this.textEditadress.Size = new System.Drawing.Size(332, 20);
             this.textEditadress.StyleController = this.layoutControl1;
             this.textEditadress.TabIndex = 7;
             // 
             // textEditdate
             // 
             this.textEditdate.EditValue = null;
-            this.textEditdate.Location = new System.Drawing.Point(76, 184);
+            this.textEditdate.Location = new System.Drawing.Point(76, 201);
             this.textEditdate.Name = "textEditdate";
             this.textEditdate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -297,29 +294,29 @@ namespace list_member_rms1
             this.textEditdate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.textEditdate.Properties.Mask.EditMask = "";
             this.textEditdate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.textEditdate.Size = new System.Drawing.Size(270, 20);
+            this.textEditdate.Size = new System.Drawing.Size(302, 20);
             this.textEditdate.StyleController = this.layoutControl1;
             this.textEditdate.TabIndex = 6;
             // 
             // textEditrib
             // 
-            this.textEditrib.Location = new System.Drawing.Point(76, 218);
+            this.textEditrib.Location = new System.Drawing.Point(76, 236);
             this.textEditrib.Name = "textEditrib";
-            this.textEditrib.Size = new System.Drawing.Size(270, 20);
+            this.textEditrib.Size = new System.Drawing.Size(302, 20);
             this.textEditrib.StyleController = this.layoutControl1;
             this.textEditrib.TabIndex = 4;
             // 
             // textEditagence
             // 
-            this.textEditagence.Location = new System.Drawing.Point(432, 218);
+            this.textEditagence.Location = new System.Drawing.Point(466, 236);
             this.textEditagence.Name = "textEditagence";
-            this.textEditagence.Size = new System.Drawing.Size(299, 20);
+            this.textEditagence.Size = new System.Drawing.Size(333, 20);
             this.textEditagence.StyleController = this.layoutControl1;
             this.textEditagence.TabIndex = 5;
             // 
             // textEditsigle
             // 
-            this.textEditsigle.Location = new System.Drawing.Point(250, 115);
+            this.textEditsigle.Location = new System.Drawing.Point(239, 126);
             this.textEditsigle.Name = "textEditsigle";
             this.textEditsigle.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -328,7 +325,7 @@ namespace list_member_rms1
             this.textEditsigle.Properties.NullText = "";
             this.textEditsigle.Properties.PopupView = this.gridLookUpEdit1View;
             this.textEditsigle.Properties.ValueMember = "id";
-            this.textEditsigle.Size = new System.Drawing.Size(215, 20);
+            this.textEditsigle.Size = new System.Drawing.Size(242, 20);
             this.textEditsigle.StyleController = this.layoutControl1;
             this.textEditsigle.TabIndex = 6;
             // 
@@ -379,7 +376,7 @@ namespace list_member_rms1
             // 
             // textEditprovince
             // 
-            this.textEditprovince.Location = new System.Drawing.Point(553, 81);
+            this.textEditprovince.Location = new System.Drawing.Point(571, 87);
             this.textEditprovince.Name = "textEditprovince";
             this.textEditprovince.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -391,13 +388,13 @@ namespace list_member_rms1
             this.textEditprovince.Properties.DisplayMember = "ProvinceFr";
             this.textEditprovince.Properties.NullText = "";
             this.textEditprovince.Properties.ValueMember = "id";
-            this.textEditprovince.Size = new System.Drawing.Size(178, 20);
+            this.textEditprovince.Size = new System.Drawing.Size(228, 20);
             this.textEditprovince.StyleController = this.layoutControl1;
             this.textEditprovince.TabIndex = 5;
             // 
             // textEditfunction
             // 
-            this.textEditfunction.Location = new System.Drawing.Point(553, 115);
+            this.textEditfunction.Location = new System.Drawing.Point(571, 126);
             this.textEditfunction.Name = "textEditfunction";
             this.textEditfunction.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
@@ -410,7 +407,7 @@ namespace list_member_rms1
             this.textEditfunction.Properties.DisplayMember = "Fonction_Fr";
             this.textEditfunction.Properties.NullText = "";
             this.textEditfunction.Properties.ValueMember = "id";
-            this.textEditfunction.Size = new System.Drawing.Size(178, 20);
+            this.textEditfunction.Size = new System.Drawing.Size(228, 20);
             this.textEditfunction.StyleController = this.layoutControl1;
             this.textEditfunction.TabIndex = 7;
             // 
@@ -448,17 +445,17 @@ namespace list_member_rms1
             this.emptySpaceItem11,
             this.emptySpaceItem12});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(743, 260);
+            this.Root.Size = new System.Drawing.Size(811, 281);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(174, 127);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(163, 138);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
             this.emptySpaceItem2.OptionsPrint.AppearanceItemControl.BackColor = System.Drawing.Color.Silver;
             this.emptySpaceItem2.OptionsPrint.AppearanceItemControl.Options.UseBackColor = true;
-            this.emptySpaceItem2.Size = new System.Drawing.Size(549, 10);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(628, 11);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
@@ -466,9 +463,9 @@ namespace list_member_rms1
             this.layoutControlItem3.Control = this.textEditnom;
             this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem3.Location = new System.Drawing.Point(174, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(163, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(283, 24);
+            this.layoutControlItem3.Size = new System.Drawing.Size(310, 24);
             this.layoutControlItem3.Text = "nom :";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(61, 13);
@@ -478,9 +475,9 @@ namespace list_member_rms1
             this.layoutControlItem4.Control = this.textEditnomar;
             this.layoutControlItem4.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem4.Location = new System.Drawing.Point(477, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(495, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(246, 24);
+            this.layoutControlItem4.Size = new System.Drawing.Size(296, 24);
             this.layoutControlItem4.Text = ": الأسم  ";
             this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Right;
@@ -492,9 +489,9 @@ namespace list_member_rms1
             this.layoutControlItem5.Control = this.textEditprenom;
             this.layoutControlItem5.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem5.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem5.Location = new System.Drawing.Point(174, 34);
+            this.layoutControlItem5.Location = new System.Drawing.Point(163, 39);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(283, 24);
+            this.layoutControlItem5.Size = new System.Drawing.Size(310, 24);
             this.layoutControlItem5.Text = "Prenom :";
             this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(61, 13);
@@ -504,9 +501,9 @@ namespace list_member_rms1
             this.layoutControlItem6.Control = this.textEditprenomar;
             this.layoutControlItem6.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem6.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem6.Location = new System.Drawing.Point(477, 34);
+            this.layoutControlItem6.Location = new System.Drawing.Point(495, 39);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(246, 24);
+            this.layoutControlItem6.Size = new System.Drawing.Size(296, 24);
             this.layoutControlItem6.Text = ": النسب";
             this.layoutControlItem6.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Right;
@@ -517,9 +514,9 @@ namespace list_member_rms1
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(457, 0);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(473, 0);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(20, 58);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(22, 63);
             this.emptySpaceItem3.Text = "emptySpaceItem1";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -527,9 +524,9 @@ namespace list_member_rms1
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem4.Location = new System.Drawing.Point(174, 24);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(163, 24);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(283, 10);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(310, 15);
             this.emptySpaceItem4.Text = "emptySpaceItem2";
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -537,9 +534,9 @@ namespace list_member_rms1
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
             this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem5.Location = new System.Drawing.Point(477, 24);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(495, 24);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(246, 10);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(296, 15);
             this.emptySpaceItem5.Text = "emptySpaceItem3";
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -548,7 +545,7 @@ namespace list_member_rms1
             this.layoutControlItem12.Control = this.pictureEdit2;
             this.layoutControlItem12.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(174, 138);
+            this.layoutControlItem12.Size = new System.Drawing.Size(163, 150);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
@@ -557,9 +554,9 @@ namespace list_member_rms1
             this.layoutControlItem7.Control = this.textEditcin;
             this.layoutControlItem7.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem7.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem7.Location = new System.Drawing.Point(174, 69);
+            this.layoutControlItem7.Location = new System.Drawing.Point(163, 75);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(283, 24);
+            this.layoutControlItem7.Size = new System.Drawing.Size(310, 24);
             this.layoutControlItem7.Text = "CIN : ";
             this.layoutControlItem7.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem7.TextSize = new System.Drawing.Size(61, 13);
@@ -569,9 +566,9 @@ namespace list_member_rms1
             this.layoutControlItem8.Control = this.textEditprovince;
             this.layoutControlItem8.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem8.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem8.Location = new System.Drawing.Point(477, 69);
+            this.layoutControlItem8.Location = new System.Drawing.Point(495, 75);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(246, 24);
+            this.layoutControlItem8.Size = new System.Drawing.Size(296, 24);
             this.layoutControlItem8.Text = "Province  :";
             this.layoutControlItem8.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem8.TextSize = new System.Drawing.Size(61, 13);
@@ -581,9 +578,9 @@ namespace list_member_rms1
             this.layoutControlItem9.Control = this.textEditsigle;
             this.layoutControlItem9.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem9.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem9.Location = new System.Drawing.Point(174, 103);
+            this.layoutControlItem9.Location = new System.Drawing.Point(163, 114);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(283, 24);
+            this.layoutControlItem9.Size = new System.Drawing.Size(310, 24);
             this.layoutControlItem9.Text = "Sigle : ";
             this.layoutControlItem9.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem9.TextSize = new System.Drawing.Size(61, 13);
@@ -593,10 +590,10 @@ namespace list_member_rms1
             this.layoutControlItem10.Control = this.textEditfunction;
             this.layoutControlItem10.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem10.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem10.Location = new System.Drawing.Point(477, 103);
+            this.layoutControlItem10.Location = new System.Drawing.Point(495, 114);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(246, 24);
-            this.layoutControlItem10.Text = "Fonction  :";
+            this.layoutControlItem10.Size = new System.Drawing.Size(296, 24);
+            this.layoutControlItem10.Text = "Qualité  :";
             this.layoutControlItem10.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem10.TextSize = new System.Drawing.Size(61, 13);
             // 
@@ -604,9 +601,9 @@ namespace list_member_rms1
             // 
             this.emptySpaceItem6.AllowHotTrack = false;
             this.emptySpaceItem6.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem6.Location = new System.Drawing.Point(457, 69);
+            this.emptySpaceItem6.Location = new System.Drawing.Point(473, 75);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(20, 58);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(22, 63);
             this.emptySpaceItem6.Text = "emptySpaceItem1";
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -614,9 +611,9 @@ namespace list_member_rms1
             // 
             this.emptySpaceItem7.AllowHotTrack = false;
             this.emptySpaceItem7.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem7.Location = new System.Drawing.Point(174, 93);
+            this.emptySpaceItem7.Location = new System.Drawing.Point(163, 99);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(283, 10);
+            this.emptySpaceItem7.Size = new System.Drawing.Size(310, 15);
             this.emptySpaceItem7.Text = "emptySpaceItem2";
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -624,40 +621,40 @@ namespace list_member_rms1
             // 
             this.emptySpaceItem8.AllowHotTrack = false;
             this.emptySpaceItem8.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem8.Location = new System.Drawing.Point(477, 93);
+            this.emptySpaceItem8.Location = new System.Drawing.Point(495, 99);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(246, 10);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(296, 15);
             this.emptySpaceItem8.Text = "emptySpaceItem3";
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem9
             // 
             this.emptySpaceItem9.AllowHotTrack = false;
-            this.emptySpaceItem9.Location = new System.Drawing.Point(174, 58);
+            this.emptySpaceItem9.Location = new System.Drawing.Point(163, 63);
             this.emptySpaceItem9.Name = "emptySpaceItem9";
-            this.emptySpaceItem9.Size = new System.Drawing.Size(549, 10);
+            this.emptySpaceItem9.Size = new System.Drawing.Size(628, 11);
             this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
             // 
             // simpleSeparator1
             // 
             this.simpleSeparator1.AllowHotTrack = false;
-            this.simpleSeparator1.Location = new System.Drawing.Point(174, 68);
+            this.simpleSeparator1.Location = new System.Drawing.Point(163, 74);
             this.simpleSeparator1.Name = "simpleSeparator1";
-            this.simpleSeparator1.Size = new System.Drawing.Size(549, 1);
+            this.simpleSeparator1.Size = new System.Drawing.Size(628, 1);
             // 
             // simpleSeparator2
             // 
             this.simpleSeparator2.AllowHotTrack = false;
-            this.simpleSeparator2.Location = new System.Drawing.Point(174, 137);
+            this.simpleSeparator2.Location = new System.Drawing.Point(163, 149);
             this.simpleSeparator2.Name = "simpleSeparator2";
-            this.simpleSeparator2.Size = new System.Drawing.Size(549, 1);
+            this.simpleSeparator2.Size = new System.Drawing.Size(628, 1);
             // 
             // emptySpaceItem13
             // 
             this.emptySpaceItem13.AllowHotTrack = false;
-            this.emptySpaceItem13.Location = new System.Drawing.Point(0, 196);
+            this.emptySpaceItem13.Location = new System.Drawing.Point(0, 213);
             this.emptySpaceItem13.Name = "emptySpaceItem13";
-            this.emptySpaceItem13.Size = new System.Drawing.Size(723, 10);
+            this.emptySpaceItem13.Size = new System.Drawing.Size(791, 11);
             this.emptySpaceItem13.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlGroup3
@@ -669,9 +666,9 @@ namespace list_member_rms1
             this.emptySpaceItem14,
             this.emptySpaceItem15,
             this.emptySpaceItem16});
-            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 206);
+            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 224);
             this.layoutControlGroup3.Name = "LayoutRootGroupForRestore";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(723, 34);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(791, 37);
             this.layoutControlGroup3.Tag = "LayoutRootGroupForRestore";
             // 
             // layoutControlItem15
@@ -681,7 +678,7 @@ namespace list_member_rms1
             this.layoutControlItem15.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem15.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(338, 24);
+            this.layoutControlItem15.Size = new System.Drawing.Size(370, 24);
             this.layoutControlItem15.Text = "RIB";
             this.layoutControlItem15.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem15.TextSize = new System.Drawing.Size(61, 13);
@@ -691,9 +688,9 @@ namespace list_member_rms1
             this.layoutControlItem16.Control = this.textEditagence;
             this.layoutControlItem16.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem16.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem16.Location = new System.Drawing.Point(356, 0);
+            this.layoutControlItem16.Location = new System.Drawing.Point(390, 0);
             this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(367, 24);
+            this.layoutControlItem16.Size = new System.Drawing.Size(401, 24);
             this.layoutControlItem16.Text = "AGENCE";
             this.layoutControlItem16.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem16.TextSize = new System.Drawing.Size(61, 13);
@@ -702,9 +699,9 @@ namespace list_member_rms1
             // 
             this.emptySpaceItem14.AllowHotTrack = false;
             this.emptySpaceItem14.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem14.Location = new System.Drawing.Point(338, 0);
+            this.emptySpaceItem14.Location = new System.Drawing.Point(370, 0);
             this.emptySpaceItem14.Name = "emptySpaceItem14";
-            this.emptySpaceItem14.Size = new System.Drawing.Size(18, 34);
+            this.emptySpaceItem14.Size = new System.Drawing.Size(20, 37);
             this.emptySpaceItem14.Text = "emptySpaceItem1";
             this.emptySpaceItem14.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -714,7 +711,7 @@ namespace list_member_rms1
             this.emptySpaceItem15.CustomizationFormText = "emptySpaceItem2";
             this.emptySpaceItem15.Location = new System.Drawing.Point(0, 24);
             this.emptySpaceItem15.Name = "emptySpaceItem15";
-            this.emptySpaceItem15.Size = new System.Drawing.Size(338, 10);
+            this.emptySpaceItem15.Size = new System.Drawing.Size(370, 13);
             this.emptySpaceItem15.Text = "emptySpaceItem2";
             this.emptySpaceItem15.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -722,9 +719,9 @@ namespace list_member_rms1
             // 
             this.emptySpaceItem16.AllowHotTrack = false;
             this.emptySpaceItem16.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem16.Location = new System.Drawing.Point(356, 24);
+            this.emptySpaceItem16.Location = new System.Drawing.Point(390, 24);
             this.emptySpaceItem16.Name = "emptySpaceItem16";
-            this.emptySpaceItem16.Size = new System.Drawing.Size(367, 10);
+            this.emptySpaceItem16.Size = new System.Drawing.Size(401, 13);
             this.emptySpaceItem16.Text = "emptySpaceItem3";
             this.emptySpaceItem16.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -733,9 +730,9 @@ namespace list_member_rms1
             this.layoutControlItem2.Control = this.textEditemail;
             this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem2.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 138);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 150);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(338, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(370, 24);
             this.layoutControlItem2.Text = "email :";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(61, 13);
@@ -745,9 +742,9 @@ namespace list_member_rms1
             this.layoutControlItem11.Control = this.textEditcontact;
             this.layoutControlItem11.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem11.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem11.Location = new System.Drawing.Point(357, 138);
+            this.layoutControlItem11.Location = new System.Drawing.Point(391, 150);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(366, 24);
+            this.layoutControlItem11.Size = new System.Drawing.Size(400, 24);
             this.layoutControlItem11.Text = "contact :";
             this.layoutControlItem11.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem11.TextSize = new System.Drawing.Size(61, 13);
@@ -757,9 +754,9 @@ namespace list_member_rms1
             this.layoutControlItem13.Control = this.textEditdate;
             this.layoutControlItem13.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem13.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem13.Location = new System.Drawing.Point(0, 172);
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 189);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(338, 24);
+            this.layoutControlItem13.Size = new System.Drawing.Size(370, 24);
             this.layoutControlItem13.Text = "Date_Naiss :";
             this.layoutControlItem13.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem13.TextSize = new System.Drawing.Size(61, 13);
@@ -769,9 +766,9 @@ namespace list_member_rms1
             this.layoutControlItem14.Control = this.textEditadress;
             this.layoutControlItem14.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem14.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem14.Location = new System.Drawing.Point(357, 172);
+            this.layoutControlItem14.Location = new System.Drawing.Point(391, 189);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(366, 24);
+            this.layoutControlItem14.Size = new System.Drawing.Size(400, 24);
             this.layoutControlItem14.Text = "Adresse : ";
             this.layoutControlItem14.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem14.TextSize = new System.Drawing.Size(61, 13);
@@ -780,18 +777,18 @@ namespace list_member_rms1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(338, 138);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(370, 150);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(19, 58);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(21, 63);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem11
             // 
             this.emptySpaceItem11.AllowHotTrack = false;
             this.emptySpaceItem11.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem11.Location = new System.Drawing.Point(0, 162);
+            this.emptySpaceItem11.Location = new System.Drawing.Point(0, 174);
             this.emptySpaceItem11.Name = "emptySpaceItem11";
-            this.emptySpaceItem11.Size = new System.Drawing.Size(338, 10);
+            this.emptySpaceItem11.Size = new System.Drawing.Size(370, 15);
             this.emptySpaceItem11.Text = "emptySpaceItem2";
             this.emptySpaceItem11.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -799,9 +796,9 @@ namespace list_member_rms1
             // 
             this.emptySpaceItem12.AllowHotTrack = false;
             this.emptySpaceItem12.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem12.Location = new System.Drawing.Point(357, 162);
+            this.emptySpaceItem12.Location = new System.Drawing.Point(391, 174);
             this.emptySpaceItem12.Name = "emptySpaceItem12";
-            this.emptySpaceItem12.Size = new System.Drawing.Size(366, 10);
+            this.emptySpaceItem12.Size = new System.Drawing.Size(400, 15);
             this.emptySpaceItem12.Text = "emptySpaceItem3";
             this.emptySpaceItem12.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -810,10 +807,9 @@ namespace list_member_rms1
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem17});
+            this.layoutControlItem1});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(767, 310);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(835, 305);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -831,7 +827,7 @@ namespace list_member_rms1
             this.layoutControlItem1.OptionsPrint.AppearanceItemControl.BorderColor = System.Drawing.Color.Silver;
             this.layoutControlItem1.OptionsPrint.AppearanceItemControl.Options.UseBackColor = true;
             this.layoutControlItem1.OptionsPrint.AppearanceItemControl.Options.UseBorderColor = true;
-            this.layoutControlItem1.Size = new System.Drawing.Size(747, 264);
+            this.layoutControlItem1.Size = new System.Drawing.Size(815, 285);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -857,19 +853,19 @@ namespace list_member_rms1
             windowsUIButtonImageOptions3.ImageUri.Uri = "Reset;Size32x32;GrayScaled";
             windowsUIButtonImageOptions4.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled";
             this.windowsUIButtonPanelMain.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Enregistrer", true, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Enregistrer", true, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", 0, true, null, true, false, true, null, -1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUIButton("Enregistrer et nouveau", true, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUIButton("Réinitialiser", true, windowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUIButton("Supprimer", true, windowsUIButtonImageOptions4, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
             this.windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.windowsUIButtonPanelMain.EnableImageTransparency = true;
             this.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White;
-            this.windowsUIButtonPanelMain.Location = new System.Drawing.Point(0, 315);
+            this.windowsUIButtonPanelMain.Location = new System.Drawing.Point(0, 335);
             this.windowsUIButtonPanelMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.windowsUIButtonPanelMain.MaximumSize = new System.Drawing.Size(0, 60);
             this.windowsUIButtonPanelMain.MinimumSize = new System.Drawing.Size(60, 60);
             this.windowsUIButtonPanelMain.Name = "windowsUIButtonPanelMain";
-            this.windowsUIButtonPanelMain.Size = new System.Drawing.Size(784, 60);
+            this.windowsUIButtonPanelMain.Size = new System.Drawing.Size(835, 60);
             this.windowsUIButtonPanelMain.TabIndex = 3;
             this.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
             this.windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
@@ -892,9 +888,16 @@ namespace list_member_rms1
             this.labelControl.Location = new System.Drawing.Point(0, 0);
             this.labelControl.Name = "labelControl";
             this.labelControl.Padding = new System.Windows.Forms.Padding(10, 5, 0, 0);
-            this.labelControl.Size = new System.Drawing.Size(784, 30);
+            this.labelControl.Size = new System.Drawing.Size(835, 30);
             this.labelControl.TabIndex = 1;
             this.labelControl.Text = "nouveau élu ";
+            this.labelControl.Click += new System.EventHandler(this.labelControl_Click);
+            // 
+            // toastNotificationsManager1
+            // 
+            this.toastNotificationsManager1.ApplicationId = "d533e41f-a803-438e-8149-b87dacbba62d";
+            this.toastNotificationsManager1.Notifications.AddRange(new DevExpress.XtraBars.ToastNotifications.IToastNotificationProperties[] {
+            new DevExpress.XtraBars.ToastNotifications.ToastNotification("0d48859f-2f42-425a-8561-59a3cc0a4aa7", ((System.Drawing.Image)(resources.GetObject("toastNotificationsManager1.Notifications"))), "Pellentesque lacinia tellus eget volutpat", "insert success", "", DevExpress.XtraBars.ToastNotifications.ToastNotificationTemplate.Text01)});
             // 
             // sigleBindingSource
             // 
@@ -908,25 +911,6 @@ namespace list_member_rms1
             // 
             this.fonctionBindingSource.DataSource = typeof(list_member_rms1.Fonction);
             // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(12, 251);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(743, 22);
-            this.simpleButton1.StyleController = this.dataLayoutControl1;
-            this.simpleButton1.TabIndex = 5;
-            this.simpleButton1.Text = "simpleButton1";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // layoutControlItem17
-            // 
-            this.layoutControlItem17.Control = this.simpleButton1;
-            this.layoutControlItem17.Location = new System.Drawing.Point(0, 264);
-            this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(747, 26);
-            this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem17.TextVisible = false;
-            // 
             // Membres
             // 
             this.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -934,7 +918,7 @@ namespace list_member_rms1
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(784, 375);
+            this.ClientSize = new System.Drawing.Size(835, 395);
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.labelControl);
             this.Controls.Add(this.windowsUIButtonPanelMain);
@@ -999,10 +983,10 @@ namespace list_member_rms1
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toastNotificationsManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sigleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.previnceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fonctionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1073,8 +1057,7 @@ namespace list_member_rms1
         private System.Windows.Forms.BindingSource previnceBindingSource;
         private DevExpress.XtraEditors.LookUpEdit textEditfunction;
         private System.Windows.Forms.BindingSource fonctionBindingSource;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
+        private DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager toastNotificationsManager1;
     }
 
 }

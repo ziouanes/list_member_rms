@@ -66,6 +66,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bureau.cs" />
+    <Compile Include="Commissions.cs" />
+    <Compile Include="Export Excel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export Excel.Designer.cs">
+      <DependentUpon>Export Excel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fonction.cs" />
     <Compile Include="Fonctionfrm.cs">
       <SubType>Form</SubType>
@@ -92,12 +100,21 @@
       <DependentUpon>Membres.cs</DependentUpon>
     </Compile>
     <Compile Include="Sigle.cs" />
+    <Compile Include="SituationFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SituationFinal.Designer.cs">
+      <DependentUpon>SituationFinal.cs</DependentUpon>
+    </Compile>
     <Compile Include="XtraUserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="XtraUserControl1.Designer.cs">
       <DependentUpon>XtraUserControl1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Export Excel.resx">
+      <DependentUpon>Export Excel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fonctionfrm.resx">
       <DependentUpon>Fonctionfrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,10 +134,15 @@
     <EmbeddedResource Include="Membres.resx">
       <DependentUpon>Membres.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SituationFinal.resx">
+      <DependentUpon>SituationFinal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="XtraUserControl1.resx">
       <DependentUpon>XtraUserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="Properties\DataSources\Bureau.datasource" />
+    <None Include="Properties\DataSources\Commissions.datasource" />
     <None Include="Properties\DataSources\Fonction.datasource" />
     <None Include="Properties\DataSources\membre.datasource" />
     <None Include="Properties\DataSources\prevince.datasource" />

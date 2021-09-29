@@ -37,7 +37,7 @@ namespace list_member_rms1
             /* Thread.CurrentThread.CurrentCulture = new CultureInfo("it-IT");
              Thread.CurrentThread.CurrentUICulture = new CultureInfo("it-IT");
 */
-            Application.Run(new Membres());
+            Application.Run(new accueil());
 
     }
         public static SqlConnection sql_con = new SqlConnection(@"server =192.168.100.92;database = list_member_rms ; user id = log1; password=P@ssword1965** ;MultipleActiveResultSets =True;");

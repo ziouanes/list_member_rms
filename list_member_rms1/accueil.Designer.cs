@@ -31,6 +31,7 @@ namespace list_member_rms1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(accueil));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.skinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
@@ -41,9 +42,15 @@ namespace list_member_rms1
             this.skinPaletteRibbonGalleryBarItem = new DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem();
             this.barButtonadd = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.Moodifier = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupNavigation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -55,20 +62,14 @@ namespace list_member_rms1
             this.navigationFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.employeesNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.gridControlmember = new DevExpress.XtraGrid.GridControl();
+            this.membreBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.employeesLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.customersNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.gridControlbureau = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.customersLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.gridControlcommision = new DevExpress.XtraGrid.GridControl();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.membreBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.colphotos = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
             this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCIN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPrenomF = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNomF = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCIN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFonction_Fr = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPrenomA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNomA = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -81,13 +82,46 @@ namespace list_member_rms1
             this.colCode_Electeur = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colRIB = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAGENCE = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colphotos = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSigle = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDénomination = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colParti = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProvinceAr = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProvinceFr = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
+            this.employeesLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.customersNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.gridControlbureau = new DevExpress.XtraGrid.GridControl();
+            this.bureauBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colid1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colphotos2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemImageEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
+            this.colnomf1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnomA1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colParti1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFonction_Fr1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProvinceFr1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSigle1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.customersLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.gridControlcommision = new DevExpress.XtraGrid.GridControl();
+            this.commissionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colid2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colphotos1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemImageEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
+            this.colnomf2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnomA2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colParti2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFonction_Fr2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProvinceFr2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSigle2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coltype_member = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).BeginInit();
@@ -96,15 +130,21 @@ namespace list_member_rms1
             this.navigationFrame.SuspendLayout();
             this.employeesNavigationPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlmember)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.membreBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             this.customersNavigationPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlbureau)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bureauBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit2)).BeginInit();
             this.navigationPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlcommision)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commissionsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.membreBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -120,9 +160,13 @@ namespace list_member_rms1
             this.skinDropDownButtonItem,
             this.skinPaletteRibbonGalleryBarItem,
             this.barButtonadd,
-            this.barButtonItem1});
+            this.barButtonItem1,
+            this.barButtonItem2,
+            this.barButtonItem3,
+            this.Moodifier,
+            this.barButtonItem5});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 48;
+            this.ribbonControl.MaxItemId = 52;
             this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageHeaderItemLinks.Add(this.barButtonItem1);
@@ -191,11 +235,43 @@ namespace list_member_rms1
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "SMS ";
+            this.barButtonItem2.Id = 48;
+            this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Liste Members";
+            this.barButtonItem3.Id = 49;
+            this.barButtonItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
+            // Moodifier
+            // 
+            this.Moodifier.Caption = "Modifier";
+            this.Moodifier.Id = 50;
+            this.Moodifier.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem4.ImageOptions.SvgImage")));
+            this.Moodifier.Name = "Moodifier";
+            this.Moodifier.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
+            // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Caption = "changer Situation";
+            this.barButtonItem5.Id = 51;
+            this.barButtonItem5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem5.ImageOptions.SvgImage")));
+            this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
+            // 
             // ribbonPage
             // 
             this.ribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroupNavigation,
-            this.ribbonPageGroup1});
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup3,
+            this.ribbonPageGroup2});
             this.ribbonPage.Name = "ribbonPage";
             this.ribbonPage.Text = "View";
             // 
@@ -209,7 +285,16 @@ namespace list_member_rms1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonadd);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // ribbonPage1
             // 
@@ -305,8 +390,11 @@ namespace list_member_rms1
             // 
             // gridControlmember
             // 
-            this.gridControlmember.DataSource = this.membreBindingSource;
+            this.gridControlmember.DataSource = this.membreBindingSource1;
             this.gridControlmember.Dock = System.Windows.Forms.DockStyle.Fill;
+            gridLevelNode1.RelationName = "Level1";
+            this.gridControlmember.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
             this.gridControlmember.Location = new System.Drawing.Point(0, 0);
             this.gridControlmember.MainView = this.gridView1;
             this.gridControlmember.MenuManager = this.ribbonControl;
@@ -317,14 +405,20 @@ namespace list_member_rms1
             this.gridControlmember.TabIndex = 1;
             this.gridControlmember.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControlmember.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gridControlmember_MouseUp);
+            // 
+            // membreBindingSource1
+            // 
+            this.membreBindingSource1.DataSource = typeof(list_member_rms1.membre);
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colphotos,
             this.colid,
-            this.colCIN,
             this.colPrenomF,
             this.colNomF,
+            this.colCIN,
             this.colFonction_Fr,
             this.colPrenomA,
             this.colNomA,
@@ -337,7 +431,6 @@ namespace list_member_rms1
             this.colCode_Electeur,
             this.colRIB,
             this.colAGENCE,
-            this.colphotos,
             this.colSigle,
             this.colDénomination,
             this.colParti,
@@ -345,6 +438,151 @@ namespace list_member_rms1
             this.colProvinceFr});
             this.gridView1.GridControl = this.gridControlmember;
             this.gridView1.Name = "gridView1";
+            // 
+            // colphotos
+            // 
+            this.colphotos.ColumnEdit = this.repositoryItemImageEdit1;
+            this.colphotos.FieldName = "photos";
+            this.colphotos.Name = "colphotos";
+            this.colphotos.Visible = true;
+            this.colphotos.VisibleIndex = 0;
+            // 
+            // repositoryItemImageEdit1
+            // 
+            this.repositoryItemImageEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemImageEdit1.Name = "repositoryItemImageEdit1";
+            this.repositoryItemImageEdit1.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.Image;
+            this.repositoryItemImageEdit1.PopupBorderStyle = DevExpress.XtraEditors.Controls.PopupBorderStyles.Simple;
+            // 
+            // colid
+            // 
+            this.colid.FieldName = "id";
+            this.colid.Name = "colid";
+            // 
+            // colPrenomF
+            // 
+            this.colPrenomF.FieldName = "PrenomF";
+            this.colPrenomF.Name = "colPrenomF";
+            this.colPrenomF.Visible = true;
+            this.colPrenomF.VisibleIndex = 1;
+            // 
+            // colNomF
+            // 
+            this.colNomF.FieldName = "NomF";
+            this.colNomF.Name = "colNomF";
+            this.colNomF.Visible = true;
+            this.colNomF.VisibleIndex = 2;
+            // 
+            // colCIN
+            // 
+            this.colCIN.FieldName = "CIN";
+            this.colCIN.Name = "colCIN";
+            this.colCIN.Visible = true;
+            this.colCIN.VisibleIndex = 3;
+            // 
+            // colFonction_Fr
+            // 
+            this.colFonction_Fr.FieldName = "Fonction_Fr";
+            this.colFonction_Fr.Name = "colFonction_Fr";
+            this.colFonction_Fr.Visible = true;
+            this.colFonction_Fr.VisibleIndex = 4;
+            // 
+            // colPrenomA
+            // 
+            this.colPrenomA.FieldName = "PrenomA";
+            this.colPrenomA.Name = "colPrenomA";
+            // 
+            // colNomA
+            // 
+            this.colNomA.FieldName = "NomA";
+            this.colNomA.Name = "colNomA";
+            // 
+            // colFonction_Ar
+            // 
+            this.colFonction_Ar.FieldName = "Fonction_Ar";
+            this.colFonction_Ar.Name = "colFonction_Ar";
+            // 
+            // colemail
+            // 
+            this.colemail.FieldName = "email";
+            this.colemail.Name = "colemail";
+            this.colemail.Visible = true;
+            this.colemail.VisibleIndex = 5;
+            // 
+            // colcontact
+            // 
+            this.colcontact.FieldName = "contact";
+            this.colcontact.Name = "colcontact";
+            this.colcontact.Visible = true;
+            this.colcontact.VisibleIndex = 6;
+            // 
+            // colpro
+            // 
+            this.colpro.FieldName = "pro";
+            this.colpro.Name = "colpro";
+            this.colpro.Visible = true;
+            this.colpro.VisibleIndex = 7;
+            // 
+            // colDate_Naiss
+            // 
+            this.colDate_Naiss.FieldName = "Date_Naiss";
+            this.colDate_Naiss.Name = "colDate_Naiss";
+            this.colDate_Naiss.Visible = true;
+            this.colDate_Naiss.VisibleIndex = 8;
+            // 
+            // colAdresse
+            // 
+            this.colAdresse.FieldName = "Adresse";
+            this.colAdresse.Name = "colAdresse";
+            this.colAdresse.Visible = true;
+            this.colAdresse.VisibleIndex = 9;
+            // 
+            // colCode_Electeur
+            // 
+            this.colCode_Electeur.FieldName = "Code_Electeur";
+            this.colCode_Electeur.Name = "colCode_Electeur";
+            this.colCode_Electeur.Visible = true;
+            this.colCode_Electeur.VisibleIndex = 10;
+            // 
+            // colRIB
+            // 
+            this.colRIB.FieldName = "RIB";
+            this.colRIB.Name = "colRIB";
+            // 
+            // colAGENCE
+            // 
+            this.colAGENCE.FieldName = "AGENCE";
+            this.colAGENCE.Name = "colAGENCE";
+            // 
+            // colSigle
+            // 
+            this.colSigle.FieldName = "Sigle";
+            this.colSigle.Name = "colSigle";
+            this.colSigle.Visible = true;
+            this.colSigle.VisibleIndex = 11;
+            // 
+            // colDénomination
+            // 
+            this.colDénomination.FieldName = "Dénomination";
+            this.colDénomination.Name = "colDénomination";
+            // 
+            // colParti
+            // 
+            this.colParti.FieldName = "Parti";
+            this.colParti.Name = "colParti";
+            // 
+            // colProvinceAr
+            // 
+            this.colProvinceAr.FieldName = "ProvinceAr";
+            this.colProvinceAr.Name = "colProvinceAr";
+            // 
+            // colProvinceFr
+            // 
+            this.colProvinceFr.FieldName = "ProvinceFr";
+            this.colProvinceFr.Name = "colProvinceFr";
+            this.colProvinceFr.Visible = true;
+            this.colProvinceFr.VisibleIndex = 12;
             // 
             // employeesLabelControl
             // 
@@ -372,20 +610,98 @@ namespace list_member_rms1
             // 
             // gridControlbureau
             // 
+            this.gridControlbureau.DataSource = this.bureauBindingSource;
             this.gridControlbureau.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControlbureau.Location = new System.Drawing.Point(0, 0);
             this.gridControlbureau.MainView = this.gridView2;
             this.gridControlbureau.MenuManager = this.ribbonControl;
             this.gridControlbureau.Name = "gridControlbureau";
+            this.gridControlbureau.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemImageEdit2});
             this.gridControlbureau.Size = new System.Drawing.Size(1076, 371);
             this.gridControlbureau.TabIndex = 2;
             this.gridControlbureau.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
+            // bureauBindingSource
+            // 
+            this.bureauBindingSource.DataSource = typeof(list_member_rms1.Bureau);
+            // 
             // gridView2
             // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colid1,
+            this.colphotos2,
+            this.colnomf1,
+            this.colnomA1,
+            this.colParti1,
+            this.colFonction_Fr1,
+            this.colProvinceFr1,
+            this.colSigle1});
             this.gridView2.GridControl = this.gridControlbureau;
             this.gridView2.Name = "gridView2";
+            // 
+            // colid1
+            // 
+            this.colid1.FieldName = "id";
+            this.colid1.Name = "colid1";
+            // 
+            // colphotos2
+            // 
+            this.colphotos2.ColumnEdit = this.repositoryItemImageEdit2;
+            this.colphotos2.FieldName = "photos";
+            this.colphotos2.Name = "colphotos2";
+            this.colphotos2.Visible = true;
+            this.colphotos2.VisibleIndex = 0;
+            // 
+            // repositoryItemImageEdit2
+            // 
+            this.repositoryItemImageEdit2.AutoHeight = false;
+            this.repositoryItemImageEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemImageEdit2.Name = "repositoryItemImageEdit2";
+            // 
+            // colnomf1
+            // 
+            this.colnomf1.FieldName = "nomf";
+            this.colnomf1.Name = "colnomf1";
+            this.colnomf1.Visible = true;
+            this.colnomf1.VisibleIndex = 1;
+            // 
+            // colnomA1
+            // 
+            this.colnomA1.FieldName = "nomA";
+            this.colnomA1.Name = "colnomA1";
+            this.colnomA1.Visible = true;
+            this.colnomA1.VisibleIndex = 2;
+            // 
+            // colParti1
+            // 
+            this.colParti1.FieldName = "Parti";
+            this.colParti1.Name = "colParti1";
+            this.colParti1.Visible = true;
+            this.colParti1.VisibleIndex = 3;
+            // 
+            // colFonction_Fr1
+            // 
+            this.colFonction_Fr1.FieldName = "Fonction_Fr";
+            this.colFonction_Fr1.Name = "colFonction_Fr1";
+            this.colFonction_Fr1.Visible = true;
+            this.colFonction_Fr1.VisibleIndex = 4;
+            // 
+            // colProvinceFr1
+            // 
+            this.colProvinceFr1.FieldName = "ProvinceFr";
+            this.colProvinceFr1.Name = "colProvinceFr1";
+            this.colProvinceFr1.Visible = true;
+            this.colProvinceFr1.VisibleIndex = 5;
+            // 
+            // colSigle1
+            // 
+            this.colSigle1.FieldName = "Sigle";
+            this.colSigle1.Name = "colSigle1";
+            this.colSigle1.Visible = true;
+            this.colSigle1.VisibleIndex = 6;
             // 
             // customersLabelControl
             // 
@@ -412,186 +728,156 @@ namespace list_member_rms1
             // 
             // gridControlcommision
             // 
+            this.gridControlcommision.DataSource = this.commissionsBindingSource;
             this.gridControlcommision.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControlcommision.Location = new System.Drawing.Point(0, 0);
             this.gridControlcommision.MainView = this.gridView3;
             this.gridControlcommision.MenuManager = this.ribbonControl;
             this.gridControlcommision.Name = "gridControlcommision";
+            this.gridControlcommision.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemImageEdit3});
             this.gridControlcommision.Size = new System.Drawing.Size(1076, 371);
             this.gridControlcommision.TabIndex = 0;
             this.gridControlcommision.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
             // 
+            // commissionsBindingSource
+            // 
+            this.commissionsBindingSource.DataSource = typeof(list_member_rms1.Commissions);
+            // 
             // gridView3
             // 
+            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colid2,
+            this.colphotos1,
+            this.colnomf2,
+            this.colnomA2,
+            this.colParti2,
+            this.colFonction_Fr2,
+            this.colProvinceFr2,
+            this.colSigle2,
+            this.coltype_member});
             this.gridView3.GridControl = this.gridControlcommision;
+            this.gridView3.GroupCount = 1;
             this.gridView3.Name = "gridView3";
+            this.gridView3.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.coltype_member, DevExpress.Data.ColumnSortOrder.Descending)});
             // 
-            // membreBindingSource
+            // colid2
             // 
-            this.membreBindingSource.DataSource = typeof(list_member_rms1.membre);
+            this.colid2.FieldName = "id";
+            this.colid2.Name = "colid2";
             // 
-            // colid
+            // colphotos1
             // 
-            this.colid.FieldName = "id";
-            this.colid.Name = "colid";
-            this.colid.Visible = true;
-            this.colid.VisibleIndex = 0;
+            this.colphotos1.ColumnEdit = this.repositoryItemImageEdit3;
+            this.colphotos1.FieldName = "photos";
+            this.colphotos1.Name = "colphotos1";
+            this.colphotos1.Visible = true;
+            this.colphotos1.VisibleIndex = 0;
             // 
-            // colCIN
+            // repositoryItemImageEdit3
             // 
-            this.colCIN.FieldName = "CIN";
-            this.colCIN.Name = "colCIN";
-            this.colCIN.Visible = true;
-            this.colCIN.VisibleIndex = 1;
-            // 
-            // colPrenomF
-            // 
-            this.colPrenomF.FieldName = "PrenomF";
-            this.colPrenomF.Name = "colPrenomF";
-            this.colPrenomF.Visible = true;
-            this.colPrenomF.VisibleIndex = 2;
-            // 
-            // colNomF
-            // 
-            this.colNomF.FieldName = "NomF";
-            this.colNomF.Name = "colNomF";
-            this.colNomF.Visible = true;
-            this.colNomF.VisibleIndex = 3;
-            // 
-            // colFonction_Fr
-            // 
-            this.colFonction_Fr.FieldName = "Fonction_Fr";
-            this.colFonction_Fr.Name = "colFonction_Fr";
-            this.colFonction_Fr.Visible = true;
-            this.colFonction_Fr.VisibleIndex = 4;
-            // 
-            // colPrenomA
-            // 
-            this.colPrenomA.FieldName = "PrenomA";
-            this.colPrenomA.Name = "colPrenomA";
-            this.colPrenomA.Visible = true;
-            this.colPrenomA.VisibleIndex = 5;
-            // 
-            // colNomA
-            // 
-            this.colNomA.FieldName = "NomA";
-            this.colNomA.Name = "colNomA";
-            this.colNomA.Visible = true;
-            this.colNomA.VisibleIndex = 6;
-            // 
-            // colFonction_Ar
-            // 
-            this.colFonction_Ar.FieldName = "Fonction_Ar";
-            this.colFonction_Ar.Name = "colFonction_Ar";
-            this.colFonction_Ar.Visible = true;
-            this.colFonction_Ar.VisibleIndex = 7;
-            // 
-            // colemail
-            // 
-            this.colemail.FieldName = "email";
-            this.colemail.Name = "colemail";
-            this.colemail.Visible = true;
-            this.colemail.VisibleIndex = 8;
-            // 
-            // colcontact
-            // 
-            this.colcontact.FieldName = "contact";
-            this.colcontact.Name = "colcontact";
-            this.colcontact.Visible = true;
-            this.colcontact.VisibleIndex = 9;
-            // 
-            // colpro
-            // 
-            this.colpro.FieldName = "pro";
-            this.colpro.Name = "colpro";
-            this.colpro.Visible = true;
-            this.colpro.VisibleIndex = 10;
-            // 
-            // colDate_Naiss
-            // 
-            this.colDate_Naiss.FieldName = "Date_Naiss";
-            this.colDate_Naiss.Name = "colDate_Naiss";
-            this.colDate_Naiss.Visible = true;
-            this.colDate_Naiss.VisibleIndex = 11;
-            // 
-            // colAdresse
-            // 
-            this.colAdresse.FieldName = "Adresse";
-            this.colAdresse.Name = "colAdresse";
-            this.colAdresse.Visible = true;
-            this.colAdresse.VisibleIndex = 12;
-            // 
-            // colCode_Electeur
-            // 
-            this.colCode_Electeur.FieldName = "Code_Electeur";
-            this.colCode_Electeur.Name = "colCode_Electeur";
-            this.colCode_Electeur.Visible = true;
-            this.colCode_Electeur.VisibleIndex = 13;
-            // 
-            // colRIB
-            // 
-            this.colRIB.FieldName = "RIB";
-            this.colRIB.Name = "colRIB";
-            this.colRIB.Visible = true;
-            this.colRIB.VisibleIndex = 14;
-            // 
-            // colAGENCE
-            // 
-            this.colAGENCE.FieldName = "AGENCE";
-            this.colAGENCE.Name = "colAGENCE";
-            this.colAGENCE.Visible = true;
-            this.colAGENCE.VisibleIndex = 15;
-            // 
-            // colphotos
-            // 
-            this.colphotos.ColumnEdit = this.repositoryItemImageEdit1;
-            this.colphotos.FieldName = "photos";
-            this.colphotos.Name = "colphotos";
-            this.colphotos.Visible = true;
-            this.colphotos.VisibleIndex = 16;
-            // 
-            // colSigle
-            // 
-            this.colSigle.FieldName = "Sigle";
-            this.colSigle.Name = "colSigle";
-            this.colSigle.Visible = true;
-            this.colSigle.VisibleIndex = 17;
-            // 
-            // colDénomination
-            // 
-            this.colDénomination.FieldName = "Dénomination";
-            this.colDénomination.Name = "colDénomination";
-            this.colDénomination.Visible = true;
-            this.colDénomination.VisibleIndex = 18;
-            // 
-            // colParti
-            // 
-            this.colParti.FieldName = "Parti";
-            this.colParti.Name = "colParti";
-            this.colParti.Visible = true;
-            this.colParti.VisibleIndex = 19;
-            // 
-            // colProvinceAr
-            // 
-            this.colProvinceAr.FieldName = "ProvinceAr";
-            this.colProvinceAr.Name = "colProvinceAr";
-            this.colProvinceAr.Visible = true;
-            this.colProvinceAr.VisibleIndex = 20;
-            // 
-            // colProvinceFr
-            // 
-            this.colProvinceFr.FieldName = "ProvinceFr";
-            this.colProvinceFr.Name = "colProvinceFr";
-            this.colProvinceFr.Visible = true;
-            this.colProvinceFr.VisibleIndex = 21;
-            // 
-            // repositoryItemImageEdit1
-            // 
-            this.repositoryItemImageEdit1.AutoHeight = false;
-            this.repositoryItemImageEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.repositoryItemImageEdit3.AutoHeight = false;
+            this.repositoryItemImageEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemImageEdit1.Name = "repositoryItemImageEdit1";
+            this.repositoryItemImageEdit3.Name = "repositoryItemImageEdit3";
+            // 
+            // colnomf2
+            // 
+            this.colnomf2.FieldName = "nomf";
+            this.colnomf2.Name = "colnomf2";
+            this.colnomf2.Visible = true;
+            this.colnomf2.VisibleIndex = 1;
+            // 
+            // colnomA2
+            // 
+            this.colnomA2.FieldName = "nomA";
+            this.colnomA2.Name = "colnomA2";
+            this.colnomA2.Visible = true;
+            this.colnomA2.VisibleIndex = 2;
+            // 
+            // colParti2
+            // 
+            this.colParti2.FieldName = "Parti";
+            this.colParti2.Name = "colParti2";
+            this.colParti2.Visible = true;
+            this.colParti2.VisibleIndex = 3;
+            // 
+            // colFonction_Fr2
+            // 
+            this.colFonction_Fr2.FieldName = "Fonction_Fr";
+            this.colFonction_Fr2.Name = "colFonction_Fr2";
+            this.colFonction_Fr2.Visible = true;
+            this.colFonction_Fr2.VisibleIndex = 4;
+            // 
+            // colProvinceFr2
+            // 
+            this.colProvinceFr2.FieldName = "ProvinceFr";
+            this.colProvinceFr2.Name = "colProvinceFr2";
+            this.colProvinceFr2.Visible = true;
+            this.colProvinceFr2.VisibleIndex = 5;
+            // 
+            // colSigle2
+            // 
+            this.colSigle2.FieldName = "Sigle";
+            this.colSigle2.Name = "colSigle2";
+            this.colSigle2.Visible = true;
+            this.colSigle2.VisibleIndex = 6;
+            // 
+            // coltype_member
+            // 
+            this.coltype_member.FieldName = "type_member";
+            this.coltype_member.Name = "coltype_member";
+            this.coltype_member.Visible = true;
+            this.coltype_member.VisibleIndex = 7;
+            // 
+            // barManager1
+            // 
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Size = new System.Drawing.Size(1241, 0);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 599);
+            this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Size = new System.Drawing.Size(1241, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 599);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(1241, 0);
+            this.barDockControlRight.Manager = this.barManager1;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 599);
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.ItemLinks.Add(this.Moodifier);
+            this.popupMenu1.ItemLinks.Add(this.barButtonItem5);
+            this.popupMenu1.Name = "popupMenu1";
+            this.popupMenu1.Ribbon = this.ribbonControl;
             // 
             // accueil
             // 
@@ -603,6 +889,10 @@ namespace list_member_rms1
             this.Controls.Add(this.officeNavigationBar);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
             this.Name = "accueil";
             this.Ribbon = this.ribbonControl;
             this.StatusBar = this.ribbonStatusBar;
@@ -615,15 +905,21 @@ namespace list_member_rms1
             this.navigationFrame.ResumeLayout(false);
             this.employeesNavigationPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlmember)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.membreBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
             this.customersNavigationPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlbureau)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bureauBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit2)).EndInit();
             this.navigationPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlcommision)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commissionsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.membreBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -663,7 +959,6 @@ namespace list_member_rms1
         private DevExpress.XtraBars.BarButtonItem barButtonadd;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private System.Windows.Forms.BindingSource membreBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colid;
         private DevExpress.XtraGrid.Columns.GridColumn colCIN;
         private DevExpress.XtraGrid.Columns.GridColumn colPrenomF;
@@ -687,5 +982,39 @@ namespace list_member_rms1
         private DevExpress.XtraGrid.Columns.GridColumn colParti;
         private DevExpress.XtraGrid.Columns.GridColumn colProvinceAr;
         private DevExpress.XtraGrid.Columns.GridColumn colProvinceFr;
+        private System.Windows.Forms.BindingSource commissionsBindingSource;
+        private System.Windows.Forms.BindingSource bureauBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colid1;
+        private DevExpress.XtraGrid.Columns.GridColumn colphotos2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit2;
+        private DevExpress.XtraGrid.Columns.GridColumn colnomf1;
+        private DevExpress.XtraGrid.Columns.GridColumn colnomA1;
+        private DevExpress.XtraGrid.Columns.GridColumn colParti1;
+        private DevExpress.XtraGrid.Columns.GridColumn colFonction_Fr1;
+        private DevExpress.XtraGrid.Columns.GridColumn colProvinceFr1;
+        private DevExpress.XtraGrid.Columns.GridColumn colSigle1;
+        private DevExpress.XtraGrid.Columns.GridColumn colid2;
+        private DevExpress.XtraGrid.Columns.GridColumn colphotos1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit3;
+        private DevExpress.XtraGrid.Columns.GridColumn colnomf2;
+        private DevExpress.XtraGrid.Columns.GridColumn colnomA2;
+        private DevExpress.XtraGrid.Columns.GridColumn colParti2;
+        private DevExpress.XtraGrid.Columns.GridColumn colFonction_Fr2;
+        private DevExpress.XtraGrid.Columns.GridColumn colProvinceFr2;
+        private DevExpress.XtraGrid.Columns.GridColumn colSigle2;
+        private DevExpress.XtraGrid.Columns.GridColumn coltype_member;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private System.Windows.Forms.BindingSource membreBindingSource1;
+        private DevExpress.XtraBars.BarButtonItem Moodifier;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.BarManager barManager1;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
     }
 }
