@@ -1,13 +1,17 @@
 ﻿using Dapper;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraPrinting;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -43,6 +47,7 @@ namespace list_member_rms1
         {
             Membres mb = new Membres();
             mb.ShowDialog();
+            select_Mession();
 
         }
 
@@ -63,9 +68,8 @@ namespace list_member_rms1
                 if (Program.sql_con.State == ConnectionState.Closed)
                     Program.sql_con.Open();
 
-                string query = $"select * from membre";
-
-                    membreBindingSource1.DataSource = Program.sql_con.Query<membre>(query, commandType: CommandType.Text);
+                string query = $"select m.* ,s.Partifr , f.Fonction_Fr , p.ProvinceAr , p.ProvinceFr from membre m  inner join  Sigle s on m.Sigle  =s.id inner join Fonction f on f.id = m.Fonction inner join Province p on p.id = m.Province  where [delete] != -1";
+                    membreBindingSource.DataSource = Program.sql_con.Query<membre>(query, commandType: CommandType.Text);
 
 
                 
@@ -208,7 +212,111 @@ namespace list_member_rms1
             situation.ShowDialog();
             select_etatBureau();
             select_etatCommissions();
+            
 
         }
+
+        private void gridControlmember_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barButtonItem4_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+        }
+
+        private void barButtonItem4_ItemClick_2(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            PrintableComponentLink componentLink = new PrintableComponentLink(new PrintingSystem());
+            componentLink.Component = gridControlmember;
+            componentLink.CreateDocument();
+            PrintTool pt = new PrintTool(componentLink.PrintingSystemBase);
+            pt.ShowPreviewDialog();
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            send_sms SMS = new send_sms();
+            SMS.ShowDialog();
+
+        }
+
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            switch_languagear();
+            MessageBox.Show("ss");
+        }
+        private void switch_languagear()
+        {
+           
+            //Create a new object, representing the German culture. 
+            CultureInfo culture = CultureInfo.CreateSpecificCulture("ar");
+
+            // The following line provides localization for the application's user interface. 
+            Thread.CurrentThread.CurrentUICulture = culture;
+
+            // The following line provides localization for data formats. 
+            Thread.CurrentThread.CurrentCulture = culture;
+
+            // Set this culture as the default culture for all threads in this application. 
+            // Note: The following properties are supported in the .NET Framework 4.5+
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
+
+
+
+            gridView1.Columns["PrenomF"].Visible = false;
+            gridView1.Columns["NomF"].Visible = false;
+            gridView1.Columns["Fonction_Fr"].Visible = false;
+            gridView1.Columns["Partifr"].Visible = false;
+            gridView1.Columns["ProvinceFr"].Visible = false;
+            gridView1.Columns["NomA"].Visible = true;
+            gridView1.Columns["PrenomA"].Visible = true;
+            gridView1.Columns["ProvinceAr"].Visible = true;
+            gridView1.Columns["ProvinceAr"].Visible = true;
+          
+
+
+
+        }
+        private void switch_languagefr()
+        {
+
+            //Create a new object, representing the German culture. 
+            CultureInfo culture = CultureInfo.CreateSpecificCulture("fr-FR");
+
+            // The following line provides localization for the application's user interface. 
+            Thread.CurrentThread.CurrentUICulture = culture;
+
+            // The following line provides localization for data formats. 
+            Thread.CurrentThread.CurrentCulture = culture;
+
+            // Set this culture as the default culture for all threads in this application. 
+            // Note: The following properties are supported in the .NET Framework 4.5+
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
+
+
+
+            gridView1.Columns["PrenomF"].Visible = true;
+            gridView1.Columns["NomF"].Visible = true;
+            gridView1.Columns["Fonction_Fr"].Visible = true;
+            gridView1.Columns["Partifr"].Visible = true;
+            gridView1.Columns["ProvinceFr"].Visible = true;
+            gridView1.Columns["NomA"].Visible = false;
+            gridView1.Columns["PrenomA"].Visible = false;
+            gridView1.Columns["ProvinceAr"].Visible = false;
+            gridView1.Columns["ProvinceAr"].Visible = false;
+
+
+
+
+        }
+
+        private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            switch_languagefr();
+       }
     }
 }

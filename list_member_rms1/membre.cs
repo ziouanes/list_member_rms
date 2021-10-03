@@ -25,9 +25,12 @@ namespace list_member_rms1
         public byte[] photos { get; set; }
         public string Sigle { get; set; }
         public string Dénomination { get; set; }
-        public string Parti { get; set; }
+        public string Partifr { get; set; }
         public string ProvinceAr { get; set; }
         public string ProvinceFr { get; set; }
+
+
+
 
 
 

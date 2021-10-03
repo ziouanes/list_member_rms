@@ -41,7 +41,7 @@ namespace list_member_rms1
 
             try
             {
-
+                id_Member = id;
 
                 if (Program.sql_con.State == ConnectionState.Closed) Program.sql_con.Open();
 
@@ -91,10 +91,10 @@ namespace list_member_rms1
 
         private void pictureEdit2_EditValueChanged(object sender, EventArgs e)
         {
-            if (pictureEdit2 != null)
-            {
-            MessageBox.Show(pictureEdit2.EditValue.ToString());
-            }
+            //if (pictureEdit2 != null)
+            //{
+            //MessageBox.Show(pictureEdit2.EditValue.ToString());
+            //}
         }
 
         private void windowsUIButtonPanelMain_Click(object sender, EventArgs e)
@@ -113,71 +113,17 @@ namespace list_member_rms1
             {
                 try
                 {
-                    if (textEditadress.Text == "" || textEditagence.Text == "" || textEditcin.Text == "" || textEditcontact.Text == "" || textEditdate.Text == "" || textEditemail.Text == "" || textEditfunction.Text == ""|| textEditnom.Text == "" || textEditnomar.Text == "" || textEditprenom.Text == "" || textEditprenomar.Text == "" || textEditprovince.Text == "" || textEditrib.Text == "" || textEditsigle.Text == "" )
-
+                    if (id_Member == 0)
                     {
-                        XtraMessageBox.Show("champs obligatoires");
+                        if (textEditadress.Text == "" || textEditagence.Text == "" || textEditcin.Text == "" || textEditcontact.Text == "" || textEditdate.Text == "" || textEditemail.Text == "" || textEditfunction.Text == ""|| textEditnom.Text == "" || textEditnomar.Text == "" || textEditprenom.Text == "" || textEditprenomar.Text == "" || textEditprovince.Text == "" || textEditrib.Text == "" || textEditsigle.Text == "" )
 
-                    }
-                    else
-                    {
-                       //MemoryStream memory = new MemoryStream();
+                        {
+                            XtraMessageBox.Show("champs obligatoires");
 
-                    // pictureEdit2.Image = Bitmap.FromFile(dialog.FileName);
-                    //pictureEdit2.Image.Save(memory, ImageFormat.Png);
-                    //byte[] b = memory.ToArray();
-
-                    string sql = "INSERT INTO [dbo].[membre](CIN,PrenomF,NomF,Fonction,PrenomA,NomA,email,contact,Date_Naiss,Adresse,RIB,AGENCE,photos,Province,Sigle) VALUES(@CIN,@PrenomF,@NomF,@Fonction,@PrenomA,@NomA,@email,@contact,@Date_Naiss,@Adresse,@RIB,@AGENCE,@photos,@Province,@Sigle)";
-
-                    Program.sql_cmd = new SqlCommand(sql, Program.sql_con);
-                    Program.sql_cmd.Parameters.AddWithValue("@CIN", textEditcin.Text);
-                    Program.sql_cmd.Parameters.AddWithValue("@PrenomF", textEditprenom.Text);
-                    Program.sql_cmd.Parameters.AddWithValue("@NomF", textEditnom.Text);
-                    Program.sql_cmd.Parameters.AddWithValue("@Fonction", textEditfunction.EditValue);
-                    Program.sql_cmd.Parameters.AddWithValue("@PrenomA", textEditprenomar.Text);
-                    Program.sql_cmd.Parameters.AddWithValue("@NomA", textEditnomar.Text);
-                    Program.sql_cmd.Parameters.AddWithValue("@email", textEditemail.Text);
-                    Program.sql_cmd.Parameters.AddWithValue("@contact", textEditcontact.Text);
-                    Program.sql_cmd.Parameters.AddWithValue("@Date_Naiss", textEditdate.Text);
-                    Program.sql_cmd.Parameters.AddWithValue("@Adresse", textEditadress.Text);
-                    Program.sql_cmd.Parameters.AddWithValue("@RIB", textEditrib.Text);
-                    Program.sql_cmd.Parameters.AddWithValue("@AGENCE", textEditagence.Text);
-                    Program.sql_cmd.Parameters.AddWithValue("@photos", pictureEdit2.EditValue);
-                    Program.sql_cmd.Parameters.AddWithValue("@Province", textEditprovince.EditValue);
-                    Program.sql_cmd.Parameters.AddWithValue("@Sigle", textEditsigle.EditValue);
-
-
-
-
-                    if (Program.sql_con.State == ConnectionState.Closed) Program.sql_con.Open();
-                            Program.sql_cmd.ExecuteNonQuery();
-                            Program.sql_con.Close();
-                        MessageBox.Show("done");
-                        toastNotificationsManager1.ShowNotification("0d48859f-2f42-425a-8561-59a3cc0a4aa7");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    XtraMessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    //this.Dispose();
-                }
-            }
-            if (e.Button == windowsUIButtonPanelMain.Buttons[1])
-            {
-                try
-                {
-                    if (textEditadress.Text == "" || textEditagence.Text == "" || textEditcin.Text == "" || textEditcontact.Text == "" || textEditdate.Text == "" || textEditemail.Text == "" || textEditfunction.Text == "" || textEditnom.Text == "" || textEditnomar.Text == "" || textEditprenom.Text == "" || textEditprenomar.Text == "" || textEditprovince.Text == "" || textEditrib.Text == "" || textEditsigle.Text == "")
-
-                    {
-                        XtraMessageBox.Show("champs obligatoires");
-
-                    }
-                    else
-                    {
-                        //MemoryStream memory = new MemoryStream();
+                        }
+                        else
+                        {
+                           //MemoryStream memory = new MemoryStream();
 
                         // pictureEdit2.Image = Bitmap.FromFile(dialog.FileName);
                         //pictureEdit2.Image.Save(memory, ImageFormat.Png);
@@ -206,11 +152,169 @@ namespace list_member_rms1
 
 
                         if (Program.sql_con.State == ConnectionState.Closed) Program.sql_con.Open();
-                        Program.sql_cmd.ExecuteNonQuery();
-                        Program.sql_con.Close();
-                        textEditadress.Text = ""; textEditagence.Text = ""; textEditcin.Text = ""; textEditcontact.Text = ""; textEditdate.Text = ""; textEditemail.Text = ""; textEditfunction.Text = "";  textEditnom.Text = "";  textEditnomar.Text = "";  textEditprenom.Text = ""; textEditprenomar.Text = ""; textEditprovince.Text = "";  textEditrib.Text = ""; textEditsigle.Text = "";
-                          toastNotificationsManager1.ShowNotification("0d48859f-2f42-425a-8561-59a3cc0a4aa7");
+                                Program.sql_cmd.ExecuteNonQuery();
+                                Program.sql_con.Close();
+                            // MessageBox.Show("done");
+                            this.Close();
+                            toastNotificationsManager1.ShowNotification("0d48859f-2f42-425a-8561-59a3cc0a4aa7");
+                        }
+
                     }
+                    else
+                    {
+                        if (textEditadress.Text == "" || textEditagence.Text == "" || textEditcin.Text == "" || textEditcontact.Text == "" || textEditdate.Text == "" || textEditemail.Text == "" || textEditfunction.Text == "" || textEditnom.Text == "" || textEditnomar.Text == "" || textEditprenom.Text == "" || textEditprenomar.Text == "" || textEditprovince.Text == "" || textEditrib.Text == "" || textEditsigle.Text == "")
+
+                        {
+                            XtraMessageBox.Show("champs obligatoires");
+
+                        }
+                        else
+                        {
+                            //MemoryStream memory = new MemoryStream();
+
+                            // pictureEdit2.Image = Bitmap.FromFile(dialog.FileName);
+                            //pictureEdit2.Image.Save(memory, ImageFormat.Png);
+                            //byte[] b = memory.ToArray();
+
+                            string sql = "update  [dbo].[membre] set CIN = @CIN ,PrenomF = @PrenomF,NomF = @NomF,Fonction = @Fonction,PrenomA = @PrenomA,NomA = @NomA,email = @email,contact = @contact,Date_Naiss = @Date_Naiss,Adresse =@Adresse,RIB = @RIB,AGENCE = @AGENCE,photos = @photos,Province = @Province,Sigle = @Sigle";
+
+                            Program.sql_cmd = new SqlCommand(sql, Program.sql_con);
+                            Program.sql_cmd.Parameters.AddWithValue("@CIN", textEditcin.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@PrenomF", textEditprenom.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@NomF", textEditnom.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@Fonction", textEditfunction.EditValue);
+                            Program.sql_cmd.Parameters.AddWithValue("@PrenomA", textEditprenomar.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@NomA", textEditnomar.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@email", textEditemail.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@contact", textEditcontact.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@Date_Naiss", textEditdate.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@Adresse", textEditadress.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@RIB", textEditrib.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@AGENCE", textEditagence.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@photos", pictureEdit2.EditValue);
+                            Program.sql_cmd.Parameters.AddWithValue("@Province", textEditprovince.EditValue);
+                            Program.sql_cmd.Parameters.AddWithValue("@Sigle", textEditsigle.EditValue);
+
+
+
+
+                            if (Program.sql_con.State == ConnectionState.Closed) Program.sql_con.Open();
+                            Program.sql_cmd.ExecuteNonQuery();
+                            Program.sql_con.Close();
+                            // MessageBox.Show("done");
+                            this.Close();
+
+                            toastNotificationsManager1.ShowNotification("215e98bf-f02e-4772-8906-9864af62c343");
+                        }
+                    }
+                        }
+                        catch (Exception ex)
+                        {
+                            XtraMessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            //this.Dispose();
+                        }
+            }
+            if (e.Button == windowsUIButtonPanelMain.Buttons[1])
+            {
+
+                try
+                {
+                    if(id_Member == 0)
+                    {
+                        if (textEditadress.Text == "" || textEditagence.Text == "" || textEditcin.Text == "" || textEditcontact.Text == "" || textEditdate.Text == "" || textEditemail.Text == "" || textEditfunction.Text == "" || textEditnom.Text == "" || textEditnomar.Text == "" || textEditprenom.Text == "" || textEditprenomar.Text == "" || textEditprovince.Text == "" || textEditrib.Text == "" || textEditsigle.Text == "")
+
+                        {
+                            XtraMessageBox.Show("champs obligatoires");
+
+                        }
+                        else
+                        {
+                            //MemoryStream memory = new MemoryStream();
+
+                            // pictureEdit2.Image = Bitmap.FromFile(dialog.FileName);
+                            //pictureEdit2.Image.Save(memory, ImageFormat.Png);
+                            //byte[] b = memory.ToArray();
+
+                            string sql = "INSERT INTO [dbo].[membre](CIN,PrenomF,NomF,Fonction,PrenomA,NomA,email,contact,Date_Naiss,Adresse,RIB,AGENCE,photos,Province,Sigle) VALUES(@CIN,@PrenomF,@NomF,@Fonction,@PrenomA,@NomA,@email,@contact,@Date_Naiss,@Adresse,@RIB,@AGENCE,@photos,@Province,@Sigle)";
+
+                            Program.sql_cmd = new SqlCommand(sql, Program.sql_con);
+                            Program.sql_cmd.Parameters.AddWithValue("@CIN", textEditcin.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@PrenomF", textEditprenom.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@NomF", textEditnom.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@Fonction", textEditfunction.EditValue);
+                            Program.sql_cmd.Parameters.AddWithValue("@PrenomA", textEditprenomar.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@NomA", textEditnomar.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@email", textEditemail.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@contact", textEditcontact.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@Date_Naiss", textEditdate.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@Adresse", textEditadress.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@RIB", textEditrib.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@AGENCE", textEditagence.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@photos", pictureEdit2.EditValue);
+                            Program.sql_cmd.Parameters.AddWithValue("@Province", textEditprovince.EditValue);
+                            Program.sql_cmd.Parameters.AddWithValue("@Sigle", textEditsigle.EditValue);
+
+
+
+
+                            if (Program.sql_con.State == ConnectionState.Closed) Program.sql_con.Open();
+                            Program.sql_cmd.ExecuteNonQuery();
+                            Program.sql_con.Close();
+                            textEditadress.Text = ""; textEditagence.Text = ""; textEditcin.Text = ""; textEditcontact.Text = ""; textEditdate.Text = ""; textEditemail.Text = ""; textEditfunction.Text = "";  textEditnom.Text = "";  textEditnomar.Text = "";  textEditprenom.Text = ""; textEditprenomar.Text = ""; textEditprovince.Text = "";  textEditrib.Text = ""; textEditsigle.Text = ""; textEditprovince.Text = ""; textEditfunction.Text = ""; id_Member = 0;
+                            toastNotificationsManager1.ShowNotification("0d48859f-2f42-425a-8561-59a3cc0a4aa7");
+                        }
+
+                    }
+                    else
+                    {
+                        //edit
+                        if (textEditadress.Text == "" || textEditagence.Text == "" || textEditcin.Text == "" || textEditcontact.Text == "" || textEditdate.Text == "" || textEditemail.Text == "" || textEditfunction.Text == "" || textEditnom.Text == "" || textEditnomar.Text == "" || textEditprenom.Text == "" || textEditprenomar.Text == "" || textEditprovince.Text == "" || textEditrib.Text == "" || textEditsigle.Text == "")
+
+                        {
+                            XtraMessageBox.Show("champs obligatoires");
+
+                        }
+                        else
+                        {
+                            //MemoryStream memory = new MemoryStream();
+
+                            // pictureEdit2.Image = Bitmap.FromFile(dialog.FileName);
+                            //pictureEdit2.Image.Save(memory, ImageFormat.Png);
+                            //byte[] b = memory.ToArray();
+
+                            string sql = "update  [dbo].[membre] set CIN = @CIN ,PrenomF = @PrenomF,NomF = @NomF,Fonction = @Fonction,PrenomA = @PrenomA,NomA = @NomA,email = @email,contact = @contact,Date_Naiss = @Date_Naiss,Adresse =@Adresse,RIB = @RIB,AGENCE = @AGENCE,photos = @photos,Province = @Province,Sigle = @Sigle";
+
+                            Program.sql_cmd = new SqlCommand(sql, Program.sql_con);
+                            Program.sql_cmd.Parameters.AddWithValue("@CIN", textEditcin.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@PrenomF", textEditprenom.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@NomF", textEditnom.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@Fonction", textEditfunction.EditValue);
+                            Program.sql_cmd.Parameters.AddWithValue("@PrenomA", textEditprenomar.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@NomA", textEditnomar.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@email", textEditemail.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@contact", textEditcontact.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@Date_Naiss", textEditdate.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@Adresse", textEditadress.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@RIB", textEditrib.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@AGENCE", textEditagence.Text);
+                            Program.sql_cmd.Parameters.AddWithValue("@photos", pictureEdit2.EditValue);
+                            Program.sql_cmd.Parameters.AddWithValue("@Province", textEditprovince.EditValue);
+                            Program.sql_cmd.Parameters.AddWithValue("@Sigle", textEditsigle.EditValue);
+
+
+
+
+                            if (Program.sql_con.State == ConnectionState.Closed) Program.sql_con.Open();
+                            Program.sql_cmd.ExecuteNonQuery();
+                            Program.sql_con.Close();
+                            textEditadress.Text = ""; textEditagence.Text = ""; textEditcin.Text = ""; textEditcontact.Text = ""; textEditdate.Text = ""; textEditemail.Text = ""; textEditfunction.Text = ""; textEditnom.Text = ""; textEditnomar.Text = ""; textEditprenom.Text = ""; textEditprenomar.Text = ""; textEditprovince.Text = ""; textEditrib.Text = ""; textEditsigle.Text = ""; textEditprovince.Text = ""; textEditfunction.Text = ""; id_Member = 0;
+                            toastNotificationsManager1.ShowNotification("215e98bf-f02e-4772-8906-9864af62c343");
+                        }
+                    }
+
                 }
                 catch (Exception ex)
                 {
@@ -223,11 +327,49 @@ namespace list_member_rms1
             }
             if (e.Button == windowsUIButtonPanelMain.Buttons[2])
             {
-                textEditadress.Text = ""; textEditagence.Text = ""; textEditcin.Text = ""; textEditcontact.Text = ""; textEditdate.Text = ""; textEditemail.Text = ""; textEditfunction.Text = "";  textEditnom.Text = ""; textEditnomar.Text = ""; textEditprenom.Text = ""; textEditprenomar.Text = ""; textEditprovince.Text = ""; textEditrib.Text = ""; textEditsigle.Text = "";
+                textEditadress.Text = ""; textEditagence.Text = ""; textEditcin.Text = ""; textEditcontact.Text = ""; textEditdate.Text = ""; textEditemail.Text = ""; textEditfunction.Text = "";  textEditnom.Text = ""; textEditnomar.Text = ""; textEditprenom.Text = ""; textEditprenomar.Text = ""; textEditprovince.Text = ""; textEditrib.Text = ""; textEditsigle.Text = "";textEditprovince.Text = "";textEditfunction.Text = "";id_Member = 0;
 
             }if (e.Button == windowsUIButtonPanelMain.Buttons[3])
             {
-               // if()
+                if (id_Member!=0)
+                {
+
+                    if (MessageBox.Show("Voulez-vous vraiment Annuler cette Member   ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        try
+                        {
+
+
+                            using (SqlCommand deleteCommand = new SqlCommand("update membre set [delete] = -1 WHERE id = @id", Program.sql_con))
+                            {
+
+
+                                if (Program.sql_con.State == ConnectionState.Closed) Program.sql_con.Open();
+
+                                deleteCommand.Parameters.AddWithValue("@id",id_Member);
+
+                                deleteCommand.ExecuteNonQuery();
+
+
+
+                            }
+                            this.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            //this.Dispose();
+                        }
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("I have idea what you want me to do", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
 
         }

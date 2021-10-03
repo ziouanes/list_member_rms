@@ -52,19 +52,13 @@ namespace list_member_rms1
             this.textEditagence = new DevExpress.XtraEditors.TextEdit();
             this.textEditsigle = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSigle = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDénomination = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
-            this.colParti = new DevExpress.XtraGrid.Columns.GridColumn();
             this.textEditprovince = new DevExpress.XtraEditors.LookUpEdit();
             this.textEditfunction = new DevExpress.XtraEditors.LookUpEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -93,12 +87,18 @@ namespace list_member_rms1
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem11 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem12 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
             this.toastNotificationsManager1 = new DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager(this.components);
             this.sigleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSigle = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDénomination = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colParti = new DevExpress.XtraGrid.Columns.GridColumn();
             this.previnceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fonctionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
@@ -126,9 +126,7 @@ namespace list_member_rms1
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
@@ -157,6 +155,8 @@ namespace list_member_rms1
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toastNotificationsManager1)).BeginInit();
@@ -208,6 +208,7 @@ namespace list_member_rms1
             this.pictureEdit2.Location = new System.Drawing.Point(12, 12);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.pictureEdit2.Size = new System.Drawing.Size(159, 146);
             this.pictureEdit2.StyleController = this.layoutControl1;
             this.pictureEdit2.TabIndex = 9;
@@ -223,7 +224,7 @@ namespace list_member_rms1
             // 
             // textEditnomar
             // 
-            this.textEditnomar.Location = new System.Drawing.Point(507, 12);
+            this.textEditnomar.Location = new System.Drawing.Point(507, 51);
             this.textEditnomar.Name = "textEditnomar";
             this.textEditnomar.Size = new System.Drawing.Size(247, 20);
             this.textEditnomar.StyleController = this.layoutControl1;
@@ -239,7 +240,7 @@ namespace list_member_rms1
             // 
             // textEditprenomar
             // 
-            this.textEditprenomar.Location = new System.Drawing.Point(507, 51);
+            this.textEditprenomar.Location = new System.Drawing.Point(507, 12);
             this.textEditprenomar.Name = "textEditprenomar";
             this.textEditprenomar.Size = new System.Drawing.Size(250, 20);
             this.textEditprenomar.StyleController = this.layoutControl1;
@@ -341,38 +342,11 @@ namespace list_member_rms1
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
-            // colid
-            // 
-            this.colid.FieldName = "id";
-            this.colid.Name = "colid";
-            // 
-            // colSigle
-            // 
-            this.colSigle.FieldName = "Sigle";
-            this.colSigle.Name = "colSigle";
-            this.colSigle.Visible = true;
-            this.colSigle.VisibleIndex = 0;
-            // 
-            // colDénomination
-            // 
-            this.colDénomination.ColumnEdit = this.repositoryItemPictureEdit1;
-            this.colDénomination.FieldName = "Dénomination";
-            this.colDénomination.Name = "colDénomination";
-            this.colDénomination.Visible = true;
-            this.colDénomination.VisibleIndex = 1;
-            // 
             // repositoryItemPictureEdit1
             // 
             this.repositoryItemPictureEdit1.Name = "repositoryItemPictureEdit1";
             this.repositoryItemPictureEdit1.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.repositoryItemPictureEdit1.ZoomingOperationMode = DevExpress.XtraEditors.Repository.ZoomingOperationMode.MouseWheel;
-            // 
-            // colParti
-            // 
-            this.colParti.FieldName = "Parti";
-            this.colParti.Name = "colParti";
-            this.colParti.Visible = true;
-            this.colParti.VisibleIndex = 2;
             // 
             // textEditprovince
             // 
@@ -418,9 +392,7 @@ namespace list_member_rms1
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.emptySpaceItem2,
             this.layoutControlItem3,
-            this.layoutControlItem4,
             this.layoutControlItem5,
-            this.layoutControlItem6,
             this.emptySpaceItem3,
             this.emptySpaceItem4,
             this.emptySpaceItem5,
@@ -443,7 +415,9 @@ namespace list_member_rms1
             this.layoutControlItem14,
             this.emptySpaceItem1,
             this.emptySpaceItem11,
-            this.emptySpaceItem12});
+            this.emptySpaceItem12,
+            this.layoutControlItem4,
+            this.layoutControlItem6});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(811, 281);
             this.Root.TextVisible = false;
@@ -470,20 +444,6 @@ namespace list_member_rms1
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(61, 13);
             // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.textEditnomar;
-            this.layoutControlItem4.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem4.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem4.Location = new System.Drawing.Point(495, 0);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(296, 24);
-            this.layoutControlItem4.Text = ": الأسم  ";
-            this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
-            this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Right;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(42, 13);
-            this.layoutControlItem4.TextToControlDistance = 3;
-            // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.textEditprenom;
@@ -495,20 +455,6 @@ namespace list_member_rms1
             this.layoutControlItem5.Text = "Prenom :";
             this.layoutControlItem5.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(61, 13);
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.textEditprenomar;
-            this.layoutControlItem6.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem6.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem6.Location = new System.Drawing.Point(495, 39);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(296, 24);
-            this.layoutControlItem6.Text = ": النسب";
-            this.layoutControlItem6.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
-            this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Right;
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(39, 13);
-            this.layoutControlItem6.TextToControlDistance = 3;
             // 
             // emptySpaceItem3
             // 
@@ -802,6 +748,34 @@ namespace list_member_rms1
             this.emptySpaceItem12.Text = "emptySpaceItem3";
             this.emptySpaceItem12.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.textEditnomar;
+            this.layoutControlItem4.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem4.CustomizationFormText = "layoutControlItem2";
+            this.layoutControlItem4.Location = new System.Drawing.Point(495, 39);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(296, 24);
+            this.layoutControlItem4.Text = ": الأسم  ";
+            this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Right;
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(42, 13);
+            this.layoutControlItem4.TextToControlDistance = 3;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.textEditprenomar;
+            this.layoutControlItem6.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem6.CustomizationFormText = "layoutControlItem4";
+            this.layoutControlItem6.Location = new System.Drawing.Point(495, 0);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(296, 24);
+            this.layoutControlItem6.Text = ": النسب";
+            this.layoutControlItem6.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem6.TextLocation = DevExpress.Utils.Locations.Right;
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(39, 13);
+            this.layoutControlItem6.TextToControlDistance = 3;
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -897,19 +871,35 @@ namespace list_member_rms1
             // 
             this.toastNotificationsManager1.ApplicationId = "d533e41f-a803-438e-8149-b87dacbba62d";
             this.toastNotificationsManager1.Notifications.AddRange(new DevExpress.XtraBars.ToastNotifications.IToastNotificationProperties[] {
-            new DevExpress.XtraBars.ToastNotifications.ToastNotification("0d48859f-2f42-425a-8561-59a3cc0a4aa7", ((System.Drawing.Image)(resources.GetObject("toastNotificationsManager1.Notifications"))), "Pellentesque lacinia tellus eget volutpat", "insert success", "", DevExpress.XtraBars.ToastNotifications.ToastNotificationTemplate.Text01)});
+            new DevExpress.XtraBars.ToastNotifications.ToastNotification("0d48859f-2f42-425a-8561-59a3cc0a4aa7", ((System.Drawing.Image)(resources.GetObject("toastNotificationsManager1.Notifications"))), "", "insert success", "", DevExpress.XtraBars.ToastNotifications.ToastNotificationTemplate.Text01),
+            new DevExpress.XtraBars.ToastNotifications.ToastNotification("215e98bf-f02e-4772-8906-9864af62c343", ((System.Drawing.Image)(resources.GetObject("toastNotificationsManager1.Notifications1"))), "", "Modifer Success", "", DevExpress.XtraBars.ToastNotifications.ToastNotificationTemplate.Text01)});
             // 
-            // sigleBindingSource
+            // colid
             // 
-            this.sigleBindingSource.DataSource = typeof(list_member_rms1._Sigle);
+            this.colid.FieldName = "id";
+            this.colid.Name = "colid";
             // 
-            // previnceBindingSource
+            // colSigle
             // 
-            this.previnceBindingSource.DataSource = typeof(list_member_rms1.prevince);
+            this.colSigle.FieldName = "Sigle";
+            this.colSigle.Name = "colSigle";
+            this.colSigle.Visible = true;
+            this.colSigle.VisibleIndex = 0;
             // 
-            // fonctionBindingSource
+            // colDénomination
             // 
-            this.fonctionBindingSource.DataSource = typeof(list_member_rms1.Fonction);
+            this.colDénomination.ColumnEdit = this.repositoryItemPictureEdit1;
+            this.colDénomination.FieldName = "Dénomination";
+            this.colDénomination.Name = "colDénomination";
+            this.colDénomination.Visible = true;
+            this.colDénomination.VisibleIndex = 1;
+            // 
+            // colParti
+            // 
+            this.colParti.FieldName = "Parti";
+            this.colParti.Name = "colParti";
+            this.colParti.Visible = true;
+            this.colParti.VisibleIndex = 2;
             // 
             // Membres
             // 
@@ -950,9 +940,7 @@ namespace list_member_rms1
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
@@ -981,6 +969,8 @@ namespace list_member_rms1
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toastNotificationsManager1)).EndInit();

@@ -29,9 +29,13 @@ namespace list_member_rms1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SituationFinal));
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.lookUpEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.toastNotificationsManager1 = new DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toastNotificationsManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // simpleButton1
@@ -66,6 +70,12 @@ namespace list_member_rms1
             this.lookUpEdit1.Size = new System.Drawing.Size(259, 20);
             this.lookUpEdit1.TabIndex = 0;
             // 
+            // toastNotificationsManager1
+            // 
+            this.toastNotificationsManager1.ApplicationId = "d533e41f-a803-438e-8149-b87dacbba62d";
+            this.toastNotificationsManager1.Notifications.AddRange(new DevExpress.XtraBars.ToastNotifications.IToastNotificationProperties[] {
+            new DevExpress.XtraBars.ToastNotifications.ToastNotification("1d64e869-4872-4e09-84cf-b39df09f0482", ((System.Drawing.Image)(resources.GetObject("toastNotificationsManager1.Notifications"))), "", "Ajouter success", "", DevExpress.XtraBars.ToastNotifications.ToastNotificationTemplate.ImageAndText01)});
+            // 
             // SituationFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -78,6 +88,7 @@ namespace list_member_rms1
             this.Text = "SituationFinal";
             this.Load += new System.EventHandler(this.SituationFinal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toastNotificationsManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -85,5 +96,6 @@ namespace list_member_rms1
         #endregion
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.ComboBoxEdit lookUpEdit1;
+        private DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager toastNotificationsManager1;
     }
 }

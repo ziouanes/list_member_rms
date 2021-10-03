@@ -37,10 +37,12 @@ namespace list_member_rms1
             /* Thread.CurrentThread.CurrentCulture = new CultureInfo("it-IT");
              Thread.CurrentThread.CurrentUICulture = new CultureInfo("it-IT");
 */
-            Application.Run(new accueil());
+            Application.Run(new send_sms());
 
     }
-        public static SqlConnection sql_con = new SqlConnection(@"server =192.168.100.92;database = list_member_rms ; user id = log1; password=P@ssword1965** ;MultipleActiveResultSets =True;");
+        //public static SqlConnection sql_con = new SqlConnection(@"server =192.168.100.92;database = list_member_rms ; user id = log1; password=P@ssword1965** ;MultipleActiveResultSets =True;");
+
+            public static SqlConnection sql_con = new SqlConnection("Data Source=AANDROID-123122;Initial Catalog=list_member_rms;Integrated Security=True;MultipleActiveResultSets = True;");
 
 
         public static SqlCommand sql_cmd;
